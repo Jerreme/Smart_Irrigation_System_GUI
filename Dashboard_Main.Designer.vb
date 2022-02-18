@@ -27,27 +27,28 @@ Partial Class Dashboard_Main
         Me.BODY = New System.Windows.Forms.Panel()
         Me.Main = New System.Windows.Forms.Panel()
         Me.BOTTOM = New System.Windows.Forms.Panel()
-        Me.BunifuPictureBox2 = New Bunifu.UI.WinForms.BunifuPictureBox()
-        Me.floatingPanel = New Bunifu.UI.WinForms.BunifuPanel()
-        Me.options_btn = New Guna.UI2.WinForms.Guna2Button()
-        Me.history_btn = New Guna.UI2.WinForms.Guna2Button()
-        Me.dashboard_btn = New Guna.UI2.WinForms.Guna2Button()
-        Me.TOP = New Bunifu.UI.WinForms.BunifuPanel()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.comLabel = New System.Windows.Forms.Label()
         Me.snackbar1 = New Bunifu.UI.WinForms.BunifuSnackbar(Me.components)
         Me.Cover = New System.Windows.Forms.Label()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
         Me.PARENT = New System.Windows.Forms.Panel()
+        Me.serial_port = New System.IO.Ports.SerialPort(Me.components)
+        Me.COMLISTENER = New System.Windows.Forms.Timer(Me.components)
         Me.BunifuPictureBox3 = New Bunifu.UI.WinForms.BunifuPictureBox()
-        Me.comLabel = New System.Windows.Forms.Label()
-        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
+        Me.BunifuPictureBox2 = New Bunifu.UI.WinForms.BunifuPictureBox()
+        Me.TOP = New Bunifu.UI.WinForms.BunifuPanel()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.floatingPanel = New Bunifu.UI.WinForms.BunifuPanel()
+        Me.options_btn = New Guna.UI2.WinForms.Guna2Button()
+        Me.history_btn = New Guna.UI2.WinForms.Guna2Button()
+        Me.dashboard_btn = New Guna.UI2.WinForms.Guna2Button()
         Me.BODY.SuspendLayout()
         Me.BOTTOM.SuspendLayout()
-        CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.floatingPanel.SuspendLayout()
-        Me.TOP.SuspendLayout()
         Me.PARENT.SuspendLayout()
         CType(Me.BunifuPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.TOP.SuspendLayout()
+        Me.floatingPanel.SuspendLayout()
         Me.SuspendLayout()
         '
         'BODY
@@ -83,147 +84,23 @@ Partial Class Dashboard_Main
         Me.BOTTOM.Size = New System.Drawing.Size(800, 45)
         Me.BOTTOM.TabIndex = 5
         '
-        'BunifuPictureBox2
+        'comLabel
         '
-        Me.BunifuPictureBox2.AllowFocused = False
-        Me.BunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.BunifuPictureBox2.AutoSizeHeight = True
-        Me.BunifuPictureBox2.BackColor = System.Drawing.Color.White
-        Me.BunifuPictureBox2.BorderRadius = 38
-        Me.BunifuPictureBox2.Image = CType(resources.GetObject("BunifuPictureBox2.Image"), System.Drawing.Image)
-        Me.BunifuPictureBox2.IsCircle = True
-        Me.BunifuPictureBox2.Location = New System.Drawing.Point(17, -10)
-        Me.BunifuPictureBox2.Margin = New System.Windows.Forms.Padding(10)
-        Me.BunifuPictureBox2.Name = "BunifuPictureBox2"
-        Me.BunifuPictureBox2.Size = New System.Drawing.Size(76, 76)
-        Me.BunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.BunifuPictureBox2.TabIndex = 3
-        Me.BunifuPictureBox2.TabStop = False
-        Me.BunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
-        '
-        'floatingPanel
-        '
-        Me.floatingPanel.Anchor = System.Windows.Forms.AnchorStyles.Left
-        Me.floatingPanel.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.floatingPanel.BackgroundImage = CType(resources.GetObject("floatingPanel.BackgroundImage"), System.Drawing.Image)
-        Me.floatingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.floatingPanel.BorderColor = System.Drawing.Color.Transparent
-        Me.floatingPanel.BorderRadius = 28
-        Me.floatingPanel.BorderThickness = 1
-        Me.floatingPanel.Controls.Add(Me.options_btn)
-        Me.floatingPanel.Controls.Add(Me.history_btn)
-        Me.floatingPanel.Controls.Add(Me.dashboard_btn)
-        Me.floatingPanel.Location = New System.Drawing.Point(33, 180)
-        Me.floatingPanel.MaximumSize = New System.Drawing.Size(44, 169)
-        Me.floatingPanel.MinimumSize = New System.Drawing.Size(44, 169)
-        Me.floatingPanel.Name = "floatingPanel"
-        Me.floatingPanel.ShowBorders = True
-        Me.floatingPanel.Size = New System.Drawing.Size(44, 169)
-        Me.floatingPanel.TabIndex = 2
-        '
-        'options_btn
-        '
-        Me.options_btn.BackColor = System.Drawing.Color.Transparent
-        Me.options_btn.BorderRadius = 8
-        Me.options_btn.CheckedState.Parent = Me.options_btn
-        Me.options_btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.options_btn.CustomImages.Parent = Me.options_btn
-        Me.options_btn.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.options_btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.options_btn.ForeColor = System.Drawing.Color.White
-        Me.options_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.options_btn.HoverState.Parent = Me.options_btn
-        Me.options_btn.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.settings_48px
-        Me.options_btn.ImageOffset = New System.Drawing.Point(1, 0)
-        Me.options_btn.ImageSize = New System.Drawing.Size(17, 17)
-        Me.options_btn.Location = New System.Drawing.Point(5, 115)
-        Me.options_btn.Margin = New System.Windows.Forms.Padding(0)
-        Me.options_btn.Name = "options_btn"
-        Me.options_btn.PressedColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.options_btn.ShadowDecoration.Parent = Me.options_btn
-        Me.options_btn.Size = New System.Drawing.Size(34, 34)
-        Me.options_btn.TabIndex = 7
-        '
-        'history_btn
-        '
-        Me.history_btn.BackColor = System.Drawing.Color.Transparent
-        Me.history_btn.BorderRadius = 8
-        Me.history_btn.CheckedState.Parent = Me.history_btn
-        Me.history_btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.history_btn.CustomImages.Parent = Me.history_btn
-        Me.history_btn.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.history_btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.history_btn.ForeColor = System.Drawing.Color.White
-        Me.history_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.history_btn.HoverState.Parent = Me.history_btn
-        Me.history_btn.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.hour_glass_48px
-        Me.history_btn.ImageOffset = New System.Drawing.Point(1, 0)
-        Me.history_btn.ImageSize = New System.Drawing.Size(18, 18)
-        Me.history_btn.Location = New System.Drawing.Point(5, 67)
-        Me.history_btn.Margin = New System.Windows.Forms.Padding(0)
-        Me.history_btn.Name = "history_btn"
-        Me.history_btn.PressedColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.history_btn.ShadowDecoration.Parent = Me.history_btn
-        Me.history_btn.Size = New System.Drawing.Size(34, 34)
-        Me.history_btn.TabIndex = 7
-        '
-        'dashboard_btn
-        '
-        Me.dashboard_btn.BackColor = System.Drawing.Color.Transparent
-        Me.dashboard_btn.BorderRadius = 8
-        Me.dashboard_btn.CheckedState.Parent = Me.dashboard_btn
-        Me.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.dashboard_btn.CustomImages.Parent = Me.dashboard_btn
-        Me.dashboard_btn.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
-        Me.dashboard_btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
-        Me.dashboard_btn.ForeColor = System.Drawing.Color.White
-        Me.dashboard_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(115, Byte), Integer))
-        Me.dashboard_btn.HoverState.Parent = Me.dashboard_btn
-        Me.dashboard_btn.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.bar_chart_48px
-        Me.dashboard_btn.ImageSize = New System.Drawing.Size(15, 15)
-        Me.dashboard_btn.Location = New System.Drawing.Point(5, 19)
-        Me.dashboard_btn.Margin = New System.Windows.Forms.Padding(0)
-        Me.dashboard_btn.Name = "dashboard_btn"
-        Me.dashboard_btn.PressedColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(103, Byte), Integer))
-        Me.dashboard_btn.ShadowDecoration.Parent = Me.dashboard_btn
-        Me.dashboard_btn.Size = New System.Drawing.Size(34, 34)
-        Me.dashboard_btn.TabIndex = 7
-        '
-        'TOP
-        '
-        Me.TOP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TOP.BackgroundColor = System.Drawing.Color.White
-        Me.TOP.BackgroundImage = CType(resources.GetObject("TOP.BackgroundImage"), System.Drawing.Image)
-        Me.TOP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.TOP.BorderColor = System.Drawing.Color.Transparent
-        Me.TOP.BorderRadius = 50
-        Me.TOP.BorderThickness = 0
-        Me.TOP.Controls.Add(Me.Label1)
-        Me.TOP.Location = New System.Drawing.Point(0, -18)
-        Me.TOP.Margin = New System.Windows.Forms.Padding(0)
-        Me.TOP.Name = "TOP"
-        Me.TOP.ShowBorders = True
-        Me.TOP.Size = New System.Drawing.Size(800, 63)
-        Me.TOP.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(86, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(241, 63)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "SMART IRRIGATION SYSTEM"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.comLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.comLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(169, Byte), Integer))
+        Me.comLabel.Location = New System.Drawing.Point(16, 6)
+        Me.comLabel.Name = "comLabel"
+        Me.comLabel.Size = New System.Drawing.Size(118, 33)
+        Me.comLabel.TabIndex = 0
+        Me.comLabel.Text = "COM"
+        Me.comLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'snackbar1
         '
         Me.snackbar1.AllowDragging = False
-        Me.snackbar1.AllowMultipleViews = True
+        Me.snackbar1.AllowMultipleViews = False
         Me.snackbar1.ClickToClose = True
         Me.snackbar1.DoubleClickToClose = False
         Me.snackbar1.DurationAfterIdle = 2000
@@ -317,6 +194,10 @@ Partial Class Dashboard_Main
         Me.PARENT.Size = New System.Drawing.Size(800, 500)
         Me.PARENT.TabIndex = 5
         '
+        'COMLISTENER
+        '
+        Me.COMLISTENER.Interval = 200
+        '
         'BunifuPictureBox3
         '
         Me.BunifuPictureBox3.AllowFocused = False
@@ -334,17 +215,142 @@ Partial Class Dashboard_Main
         Me.BunifuPictureBox3.TabStop = False
         Me.BunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
         '
-        'comLabel
+        'BunifuPictureBox2
         '
-        Me.comLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.comLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.comLabel.Location = New System.Drawing.Point(16, 6)
-        Me.comLabel.Name = "comLabel"
-        Me.comLabel.Size = New System.Drawing.Size(61, 33)
-        Me.comLabel.TabIndex = 0
-        Me.comLabel.Text = "COM"
-        Me.comLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuPictureBox2.AllowFocused = False
+        Me.BunifuPictureBox2.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BunifuPictureBox2.AutoSizeHeight = True
+        Me.BunifuPictureBox2.BackColor = System.Drawing.Color.White
+        Me.BunifuPictureBox2.BorderRadius = 38
+        Me.BunifuPictureBox2.Image = CType(resources.GetObject("BunifuPictureBox2.Image"), System.Drawing.Image)
+        Me.BunifuPictureBox2.IsCircle = True
+        Me.BunifuPictureBox2.Location = New System.Drawing.Point(17, -10)
+        Me.BunifuPictureBox2.Margin = New System.Windows.Forms.Padding(10)
+        Me.BunifuPictureBox2.Name = "BunifuPictureBox2"
+        Me.BunifuPictureBox2.Size = New System.Drawing.Size(76, 76)
+        Me.BunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.BunifuPictureBox2.TabIndex = 3
+        Me.BunifuPictureBox2.TabStop = False
+        Me.BunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
+        '
+        'TOP
+        '
+        Me.TOP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TOP.BackgroundColor = System.Drawing.Color.White
+        Me.TOP.BackgroundImage = CType(resources.GetObject("TOP.BackgroundImage"), System.Drawing.Image)
+        Me.TOP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TOP.BorderColor = System.Drawing.Color.Transparent
+        Me.TOP.BorderRadius = 50
+        Me.TOP.BorderThickness = 0
+        Me.TOP.Controls.Add(Me.Label1)
+        Me.TOP.Location = New System.Drawing.Point(0, -18)
+        Me.TOP.Margin = New System.Windows.Forms.Padding(0)
+        Me.TOP.Name = "TOP"
+        Me.TOP.ShowBorders = True
+        Me.TOP.Size = New System.Drawing.Size(800, 63)
+        Me.TOP.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(86, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(241, 63)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "SMART IRRIGATION SYSTEM"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'floatingPanel
+        '
+        Me.floatingPanel.Anchor = System.Windows.Forms.AnchorStyles.Left
+        Me.floatingPanel.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.floatingPanel.BackgroundImage = CType(resources.GetObject("floatingPanel.BackgroundImage"), System.Drawing.Image)
+        Me.floatingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.floatingPanel.BorderColor = System.Drawing.Color.Transparent
+        Me.floatingPanel.BorderRadius = 28
+        Me.floatingPanel.BorderThickness = 1
+        Me.floatingPanel.Controls.Add(Me.options_btn)
+        Me.floatingPanel.Controls.Add(Me.history_btn)
+        Me.floatingPanel.Controls.Add(Me.dashboard_btn)
+        Me.floatingPanel.Location = New System.Drawing.Point(33, 180)
+        Me.floatingPanel.MaximumSize = New System.Drawing.Size(44, 169)
+        Me.floatingPanel.MinimumSize = New System.Drawing.Size(44, 169)
+        Me.floatingPanel.Name = "floatingPanel"
+        Me.floatingPanel.ShowBorders = True
+        Me.floatingPanel.Size = New System.Drawing.Size(44, 169)
+        Me.floatingPanel.TabIndex = 2
+        '
+        'options_btn
+        '
+        Me.options_btn.BackColor = System.Drawing.Color.Transparent
+        Me.options_btn.BorderRadius = 8
+        Me.options_btn.CheckedState.Parent = Me.options_btn
+        Me.options_btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.options_btn.CustomImages.Parent = Me.options_btn
+        Me.options_btn.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.options_btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.options_btn.ForeColor = System.Drawing.Color.White
+        Me.options_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.options_btn.HoverState.Parent = Me.options_btn
+        Me.options_btn.Image = CType(resources.GetObject("options_btn.Image"), System.Drawing.Image)
+        Me.options_btn.ImageOffset = New System.Drawing.Point(1, 0)
+        Me.options_btn.ImageSize = New System.Drawing.Size(17, 17)
+        Me.options_btn.Location = New System.Drawing.Point(5, 115)
+        Me.options_btn.Margin = New System.Windows.Forms.Padding(0)
+        Me.options_btn.Name = "options_btn"
+        Me.options_btn.PressedColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(103, Byte), Integer))
+        Me.options_btn.ShadowDecoration.Parent = Me.options_btn
+        Me.options_btn.Size = New System.Drawing.Size(34, 34)
+        Me.options_btn.TabIndex = 7
+        '
+        'history_btn
+        '
+        Me.history_btn.BackColor = System.Drawing.Color.Transparent
+        Me.history_btn.BorderRadius = 8
+        Me.history_btn.CheckedState.Parent = Me.history_btn
+        Me.history_btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.history_btn.CustomImages.Parent = Me.history_btn
+        Me.history_btn.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.history_btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.history_btn.ForeColor = System.Drawing.Color.White
+        Me.history_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.history_btn.HoverState.Parent = Me.history_btn
+        Me.history_btn.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.hour_glass_48px_gray
+        Me.history_btn.ImageOffset = New System.Drawing.Point(1, 0)
+        Me.history_btn.ImageSize = New System.Drawing.Size(18, 18)
+        Me.history_btn.Location = New System.Drawing.Point(5, 67)
+        Me.history_btn.Margin = New System.Windows.Forms.Padding(0)
+        Me.history_btn.Name = "history_btn"
+        Me.history_btn.PressedColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(103, Byte), Integer))
+        Me.history_btn.ShadowDecoration.Parent = Me.history_btn
+        Me.history_btn.Size = New System.Drawing.Size(34, 34)
+        Me.history_btn.TabIndex = 7
+        '
+        'dashboard_btn
+        '
+        Me.dashboard_btn.BackColor = System.Drawing.Color.Transparent
+        Me.dashboard_btn.BorderRadius = 8
+        Me.dashboard_btn.CheckedState.Parent = Me.dashboard_btn
+        Me.dashboard_btn.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.dashboard_btn.CustomImages.Parent = Me.dashboard_btn
+        Me.dashboard_btn.FillColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
+        Me.dashboard_btn.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.dashboard_btn.ForeColor = System.Drawing.Color.White
+        Me.dashboard_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(115, Byte), Integer))
+        Me.dashboard_btn.HoverState.Parent = Me.dashboard_btn
+        Me.dashboard_btn.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.bar_chart_48px
+        Me.dashboard_btn.ImageSize = New System.Drawing.Size(15, 15)
+        Me.dashboard_btn.Location = New System.Drawing.Point(5, 19)
+        Me.dashboard_btn.Margin = New System.Windows.Forms.Padding(0)
+        Me.dashboard_btn.Name = "dashboard_btn"
+        Me.dashboard_btn.PressedColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(163, Byte), Integer), CType(CType(103, Byte), Integer))
+        Me.dashboard_btn.ShadowDecoration.Parent = Me.dashboard_btn
+        Me.dashboard_btn.Size = New System.Drawing.Size(34, 34)
+        Me.dashboard_btn.TabIndex = 7
         '
         'Dashboard_Main
         '
@@ -363,11 +369,11 @@ Partial Class Dashboard_Main
         Me.Tag = "816, 539"
         Me.BODY.ResumeLayout(False)
         Me.BOTTOM.ResumeLayout(False)
-        CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.floatingPanel.ResumeLayout(False)
-        Me.TOP.ResumeLayout(False)
         Me.PARENT.ResumeLayout(False)
         CType(Me.BunifuPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.TOP.ResumeLayout(False)
+        Me.floatingPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -387,5 +393,6 @@ Partial Class Dashboard_Main
     Friend WithEvents PARENT As Panel
     Friend WithEvents BunifuPictureBox3 As Bunifu.UI.WinForms.BunifuPictureBox
     Friend WithEvents comLabel As Label
-    Friend WithEvents SerialPort1 As IO.Ports.SerialPort
+    Friend WithEvents COMLISTENER As Timer
+    Friend WithEvents serial_port As IO.Ports.SerialPort
 End Class

@@ -13,7 +13,8 @@ Public Class Dashboard_Main
         'Assignment
         thread1 = New Thread(New ThreadStart(AddressOf loadAllChilForms))
         thread1.Start()
-
+        comsClass = New Coms()
+        COMLISTENER.Start()
 
         setActiveBtnn(dashboard_btn)
     End Sub
@@ -23,7 +24,7 @@ Public Class Dashboard_Main
     Dim thread1
 
     'Floating Buttons
-    Dim active_col As Color = Color.FromArgb(57, 191, 115)
+    Public active_col As Color = Color.FromArgb(57, 191, 115)
     Dim iddle_Col As Color = Color.FromArgb(39, 174, 97)
 
     'Forms
@@ -31,17 +32,32 @@ Public Class Dashboard_Main
     Dim optionsForm As Options
     Dim currentForm As Form
 
+    'Classes
+    Dim comsClass As Coms
+
+    'Global Variables
+    Dim connected As Boolean = False
+
     Sub setActiveBtnn(sender As Object)
         active_btn = CType(sender, Guna.UI2.WinForms.Guna2Button)
 
         If (active_btn IsNot dashboard_btn) Then
             dashboard_btn.FillColor = iddle_Col
+            dashboard_btn.Image = My.Resources.ResourceManager.GetObject("bar_chart_48px_gray")
+        Else
+            active_btn.Image = My.Resources.ResourceManager.GetObject("bar_chart_48px")
         End If
         If (active_btn IsNot history_btn) Then
             history_btn.FillColor = iddle_Col
+            history_btn.Image = My.Resources.ResourceManager.GetObject("hour_glass_48px_gray")
+        Else
+            active_btn.Image = My.Resources.ResourceManager.GetObject("hour_glass_48px")
         End If
         If (active_btn IsNot options_btn) Then
             options_btn.FillColor = iddle_Col
+            options_btn.Image = My.Resources.ResourceManager.GetObject("settings_48px_gray")
+        Else
+            active_btn.Image = My.Resources.ResourceManager.GetObject("settings_48px")
         End If
 
         active_btn.FillColor = active_col
@@ -113,5 +129,43 @@ Public Class Dashboard_Main
         End If
     End Sub
 
+    Private Sub COMLISTENER_Tick(sender As Object, e As EventArgs) Handles COMLISTENER.Tick
+        Dim res As Integer = comsClass.comListen(serial_port)
 
+        If (res = 1) Then
+            snackbar1.Show(
+                    Me,
+                    "Connected Succesfully",
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Information,
+                    2000, "",
+                    Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight)
+
+            connected = True
+            comLabel.Text = comsClass.comPort
+            comLabel.ForeColor = Color.FromArgb(54, 115, 169) 'Blue
+        ElseIf (res = 0) Then
+            snackbar1.Show(
+                    Me,
+                    "Arduino Board has been Disconnected",
+                    Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Warning,
+                    2000, "",
+                    Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight)
+
+            connected = False
+            comLabel.Text = "NOT CONNECTED"
+            comLabel.ForeColor = Color.FromArgb(241, 74, 22) 'Red
+        End If
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) 
+        If connected Then
+            serial_port.Write("A")
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) 
+        If connected Then
+            serial_port.Write("a")
+        End If
+    End Sub
 End Class

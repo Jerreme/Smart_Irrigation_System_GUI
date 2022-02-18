@@ -55,6 +55,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>bin\Debug\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel">
+      <HintPath>..\..\Add-To-References\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuImageButton">
       <HintPath>..\..\Add-To-References\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
     </Reference>
@@ -99,6 +102,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Coms.vb" />
     <Compile Include="Dashboard_Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +196,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\hour_glass_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\settings_48px_g.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\settings_48px_gr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings_48px_gr.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\settings_48px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\deadline_48px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\bar_chart_48px_gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\hour_glass_48px_gray.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
