@@ -23,31 +23,52 @@ Partial Class Dashboard_Main
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
+        Dim ChartArea3 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend3 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series3 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard_Main))
         Me.BODY = New System.Windows.Forms.Panel()
         Me.Main = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Chart2 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.BOTTOM = New System.Windows.Forms.Panel()
         Me.comLabel = New System.Windows.Forms.Label()
         Me.snackbar1 = New Bunifu.UI.WinForms.BunifuSnackbar(Me.components)
         Me.Cover = New System.Windows.Forms.Label()
         Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
-        Me.PARENT = New System.Windows.Forms.Panel()
-        Me.serial_port = New System.IO.Ports.SerialPort(Me.components)
-        Me.COMLISTENER = New System.Windows.Forms.Timer(Me.components)
-        Me.BunifuPictureBox3 = New Bunifu.UI.WinForms.BunifuPictureBox()
-        Me.BunifuPictureBox2 = New Bunifu.UI.WinForms.BunifuPictureBox()
         Me.TOP = New Bunifu.UI.WinForms.BunifuPanel()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.PARENT = New System.Windows.Forms.Panel()
+        Me.BunifuPictureBox3 = New Bunifu.UI.WinForms.BunifuPictureBox()
+        Me.BunifuPictureBox2 = New Bunifu.UI.WinForms.BunifuPictureBox()
         Me.floatingPanel = New Bunifu.UI.WinForms.BunifuPanel()
         Me.options_btn = New Guna.UI2.WinForms.Guna2Button()
         Me.history_btn = New Guna.UI2.WinForms.Guna2Button()
         Me.dashboard_btn = New Guna.UI2.WinForms.Guna2Button()
+        Me.serial_port = New System.IO.Ports.SerialPort(Me.components)
+        Me.COMLISTENER = New System.Windows.Forms.Timer(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.BODY.SuspendLayout()
+        Me.Main.SuspendLayout()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.BOTTOM.SuspendLayout()
+        Me.TOP.SuspendLayout()
         Me.PARENT.SuspendLayout()
         CType(Me.BunifuPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.TOP.SuspendLayout()
         Me.floatingPanel.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -61,38 +82,175 @@ Partial Class Dashboard_Main
         Me.BODY.Location = New System.Drawing.Point(0, 45)
         Me.BODY.Margin = New System.Windows.Forms.Padding(0)
         Me.BODY.Name = "BODY"
-        Me.BODY.Size = New System.Drawing.Size(800, 410)
+        Me.BODY.Size = New System.Drawing.Size(800, 415)
         Me.BODY.TabIndex = 4
         '
         'Main
         '
         Me.Main.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.Main.Controls.Add(Me.Label3)
+        Me.Main.Controls.Add(Me.Label2)
+        Me.Main.Controls.Add(Me.PictureBox4)
+        Me.Main.Controls.Add(Me.PictureBox3)
+        Me.Main.Controls.Add(Me.Chart2)
+        Me.Main.Controls.Add(Me.Chart1)
+        Me.Main.Controls.Add(Me.PictureBox2)
+        Me.Main.Controls.Add(Me.PictureBox1)
         Me.Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Main.Location = New System.Drawing.Point(0, 0)
         Me.Main.Name = "Main"
-        Me.Main.Size = New System.Drawing.Size(800, 410)
+        Me.Main.Size = New System.Drawing.Size(800, 415)
         Me.Main.TabIndex = 0
+        '
+        'Label2
+        '
+        Me.Label2.BackColor = System.Drawing.Color.White
+        Me.Label2.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        Me.Label2.Location = New System.Drawing.Point(411, 90)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(144, 50)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "80 %"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'PictureBox4
+        '
+        Me.PictureBox4.BackColor = System.Drawing.Color.White
+        Me.PictureBox4.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.temperature_48px
+        Me.PictureBox4.Location = New System.Drawing.Point(521, 297)
+        Me.PictureBox4.Name = "PictureBox4"
+        Me.PictureBox4.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox4.TabIndex = 5
+        Me.PictureBox4.TabStop = False
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackColor = System.Drawing.Color.White
+        Me.PictureBox3.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.humidity_48px
+        Me.PictureBox3.Location = New System.Drawing.Point(521, 154)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(24, 24)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 4
+        Me.PictureBox3.TabStop = False
+        '
+        'Chart2
+        '
+        ChartArea3.AxisX.IsLabelAutoFit = False
+        ChartArea3.AxisX.LabelStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea3.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        ChartArea3.AxisX.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.AxisY.IsLabelAutoFit = False
+        ChartArea3.AxisY.LabelStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea3.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        ChartArea3.AxisY.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.AxisY.MinorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.BorderColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea3.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea3)
+        Legend3.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Legend3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        Legend3.IsTextAutoFit = False
+        Legend3.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend3)
+        Me.Chart2.Location = New System.Drawing.Point(126, 194)
+        Me.Chart2.Name = "Chart2"
+        Series3.BorderWidth = 2
+        Series3.ChartArea = "ChartArea1"
+        Series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
+        Series3.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        Series3.Legend = "Legend1"
+        Series3.Name = "Temperature"
+        Me.Chart2.Series.Add(Series3)
+        Me.Chart2.Size = New System.Drawing.Size(429, 137)
+        Me.Chart2.TabIndex = 3
+        Me.Chart2.Tag = "255, 153, 0"
+        Me.Chart2.Text = "Chart2"
+        '
+        'Chart1
+        '
+        ChartArea4.AxisX.IsLabelAutoFit = False
+        ChartArea4.AxisX.LabelStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea4.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        ChartArea4.AxisX.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea4.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea4.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea4.AxisY.IsLabelAutoFit = False
+        ChartArea4.AxisY.LabelStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea4.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        ChartArea4.AxisY.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea4.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea4.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea4.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea4)
+        Legend4.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Legend4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        Legend4.IsTextAutoFit = False
+        Legend4.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend4)
+        Me.Chart1.Location = New System.Drawing.Point(128, 51)
+        Me.Chart1.Name = "Chart1"
+        Series4.BorderWidth = 2
+        Series4.ChartArea = "ChartArea1"
+        Series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
+        Series4.Color = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        Series4.Legend = "Legend1"
+        Series4.Name = "Humidity       "
+        Me.Chart1.Series.Add(Series4)
+        Me.Chart1.Size = New System.Drawing.Size(427, 137)
+        Me.Chart1.TabIndex = 2
+        Me.Chart1.Tag = "96, 180, 249"
+        Me.Chart1.Text = "Chart1"
+        '
+        'PictureBox2
+        '
+        Me.PictureBox2.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.plant6
+        Me.PictureBox2.Location = New System.Drawing.Point(-78, -57)
+        Me.PictureBox2.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox2.Name = "PictureBox2"
+        Me.PictureBox2.Size = New System.Drawing.Size(176, 228)
+        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox2.TabIndex = 1
+        Me.PictureBox2.TabStop = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.plant3
+        Me.PictureBox1.Location = New System.Drawing.Point(657, 139)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(0)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(211, 280)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'BOTTOM
         '
         Me.BOTTOM.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.BOTTOM.Controls.Add(Me.comLabel)
         Me.BOTTOM.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.BOTTOM.Location = New System.Drawing.Point(0, 455)
+        Me.BOTTOM.Location = New System.Drawing.Point(0, 460)
         Me.BOTTOM.Margin = New System.Windows.Forms.Padding(0)
         Me.BOTTOM.Name = "BOTTOM"
-        Me.BOTTOM.Size = New System.Drawing.Size(800, 45)
+        Me.BOTTOM.Size = New System.Drawing.Size(800, 40)
         Me.BOTTOM.TabIndex = 5
         '
         'comLabel
         '
         Me.comLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.comLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comLabel.Font = New System.Drawing.Font("Segoe UI", 9.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.comLabel.ForeColor = System.Drawing.Color.FromArgb(CType(CType(54, Byte), Integer), CType(CType(115, Byte), Integer), CType(CType(169, Byte), Integer))
-        Me.comLabel.Location = New System.Drawing.Point(16, 6)
+        Me.comLabel.Location = New System.Drawing.Point(16, 5)
         Me.comLabel.Name = "comLabel"
-        Me.comLabel.Size = New System.Drawing.Size(118, 33)
+        Me.comLabel.Size = New System.Drawing.Size(118, 30)
         Me.comLabel.TabIndex = 0
         Me.comLabel.Text = "COM"
         Me.comLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -178,6 +336,37 @@ Partial Class Dashboard_Main
         '
         Me.Guna2DragControl1.TargetControl = Me.TOP
         '
+        'TOP
+        '
+        Me.TOP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TOP.BackgroundColor = System.Drawing.Color.White
+        Me.TOP.BackgroundImage = CType(resources.GetObject("TOP.BackgroundImage"), System.Drawing.Image)
+        Me.TOP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.TOP.BorderColor = System.Drawing.Color.Transparent
+        Me.TOP.BorderRadius = 50
+        Me.TOP.BorderThickness = 0
+        Me.TOP.Controls.Add(Me.Label1)
+        Me.TOP.Location = New System.Drawing.Point(0, -18)
+        Me.TOP.Margin = New System.Windows.Forms.Padding(0)
+        Me.TOP.Name = "TOP"
+        Me.TOP.ShowBorders = True
+        Me.TOP.Size = New System.Drawing.Size(800, 63)
+        Me.TOP.TabIndex = 3
+        '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.White
+        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.Label1.Location = New System.Drawing.Point(86, 8)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
+        Me.Label1.Size = New System.Drawing.Size(241, 63)
+        Me.Label1.TabIndex = 0
+        Me.Label1.Text = "SMART IRRIGATION SYSTEM"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'PARENT
         '
         Me.PARENT.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(245, Byte), Integer))
@@ -193,10 +382,6 @@ Partial Class Dashboard_Main
         Me.PARENT.Name = "PARENT"
         Me.PARENT.Size = New System.Drawing.Size(800, 500)
         Me.PARENT.TabIndex = 5
-        '
-        'COMLISTENER
-        '
-        Me.COMLISTENER.Interval = 200
         '
         'BunifuPictureBox3
         '
@@ -232,37 +417,6 @@ Partial Class Dashboard_Main
         Me.BunifuPictureBox2.TabIndex = 3
         Me.BunifuPictureBox2.TabStop = False
         Me.BunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
-        '
-        'TOP
-        '
-        Me.TOP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TOP.BackgroundColor = System.Drawing.Color.White
-        Me.TOP.BackgroundImage = CType(resources.GetObject("TOP.BackgroundImage"), System.Drawing.Image)
-        Me.TOP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.TOP.BorderColor = System.Drawing.Color.Transparent
-        Me.TOP.BorderRadius = 50
-        Me.TOP.BorderThickness = 0
-        Me.TOP.Controls.Add(Me.Label1)
-        Me.TOP.Location = New System.Drawing.Point(0, -18)
-        Me.TOP.Margin = New System.Windows.Forms.Padding(0)
-        Me.TOP.Name = "TOP"
-        Me.TOP.ShowBorders = True
-        Me.TOP.Size = New System.Drawing.Size(800, 63)
-        Me.TOP.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.White
-        Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(86, 8)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(241, 63)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "SMART IRRIGATION SYSTEM"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'floatingPanel
         '
@@ -352,6 +506,22 @@ Partial Class Dashboard_Main
         Me.dashboard_btn.Size = New System.Drawing.Size(34, 34)
         Me.dashboard_btn.TabIndex = 7
         '
+        'COMLISTENER
+        '
+        Me.COMLISTENER.Interval = 200
+        '
+        'Label3
+        '
+        Me.Label3.BackColor = System.Drawing.Color.White
+        Me.Label3.Font = New System.Drawing.Font("Segoe UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.Label3.Location = New System.Drawing.Point(411, 234)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(144, 50)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "40 °C"
+        Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'Dashboard_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -368,11 +538,18 @@ Partial Class Dashboard_Main
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Tag = "816, 539"
         Me.BODY.ResumeLayout(False)
+        Me.Main.ResumeLayout(False)
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.BOTTOM.ResumeLayout(False)
+        Me.TOP.ResumeLayout(False)
         Me.PARENT.ResumeLayout(False)
         CType(Me.BunifuPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.TOP.ResumeLayout(False)
         Me.floatingPanel.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -395,4 +572,12 @@ Partial Class Dashboard_Main
     Friend WithEvents comLabel As Label
     Friend WithEvents COMLISTENER As Timer
     Friend WithEvents serial_port As IO.Ports.SerialPort
+    Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents PictureBox2 As PictureBox
+    Friend WithEvents Chart2 As DataVisualization.Charting.Chart
+    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents PictureBox4 As PictureBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 End Class

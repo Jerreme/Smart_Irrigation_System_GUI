@@ -157,15 +157,16 @@ Public Class Dashboard_Main
         End If
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) 
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         If connected Then
             serial_port.Write("A")
         End If
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) 
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         If connected Then
             serial_port.Write("a")
         End If
     End Sub
+
 End Class
