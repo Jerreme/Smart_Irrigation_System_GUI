@@ -26,7 +26,7 @@ Partial Class Dashboard_Main
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard_Main))
         Me.BODY = New System.Windows.Forms.Panel()
         Me.Main = New System.Windows.Forms.Panel()
-        Me.BunifuPictureBox1 = New Bunifu.UI.WinForms.BunifuPictureBox()
+        Me.BOTTOM = New System.Windows.Forms.Panel()
         Me.BunifuPictureBox2 = New Bunifu.UI.WinForms.BunifuPictureBox()
         Me.floatingPanel = New Bunifu.UI.WinForms.BunifuPanel()
         Me.options_btn = New Guna.UI2.WinForms.Guna2Button()
@@ -36,49 +36,52 @@ Partial Class Dashboard_Main
         Me.Label1 = New System.Windows.Forms.Label()
         Me.snackbar1 = New Bunifu.UI.WinForms.BunifuSnackbar(Me.components)
         Me.Cover = New System.Windows.Forms.Label()
+        Me.Guna2DragControl1 = New Guna.UI2.WinForms.Guna2DragControl(Me.components)
+        Me.PARENT = New System.Windows.Forms.Panel()
+        Me.BunifuPictureBox3 = New Bunifu.UI.WinForms.BunifuPictureBox()
+        Me.comLabel = New System.Windows.Forms.Label()
+        Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
         Me.BODY.SuspendLayout()
-        CType(Me.BunifuPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.BOTTOM.SuspendLayout()
         CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.floatingPanel.SuspendLayout()
         Me.TOP.SuspendLayout()
+        Me.PARENT.SuspendLayout()
+        CType(Me.BunifuPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'BODY
         '
+        Me.BODY.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.BODY.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
         Me.BODY.Controls.Add(Me.Main)
-        Me.BODY.Location = New System.Drawing.Point(0, 62)
+        Me.BODY.Location = New System.Drawing.Point(0, 45)
         Me.BODY.Margin = New System.Windows.Forms.Padding(0)
         Me.BODY.Name = "BODY"
-        Me.BODY.Size = New System.Drawing.Size(800, 442)
+        Me.BODY.Size = New System.Drawing.Size(800, 410)
         Me.BODY.TabIndex = 4
         '
         'Main
         '
+        Me.Main.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.Main.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Main.Location = New System.Drawing.Point(0, 0)
         Me.Main.Name = "Main"
-        Me.Main.Size = New System.Drawing.Size(800, 442)
+        Me.Main.Size = New System.Drawing.Size(800, 410)
         Me.Main.TabIndex = 0
         '
-        'BunifuPictureBox1
+        'BOTTOM
         '
-        Me.BunifuPictureBox1.AllowFocused = False
-        Me.BunifuPictureBox1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.BunifuPictureBox1.AutoSizeHeight = True
-        Me.BunifuPictureBox1.BackColor = System.Drawing.Color.White
-        Me.BunifuPictureBox1.BorderRadius = 25
-        Me.BunifuPictureBox1.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.Logo
-        Me.BunifuPictureBox1.IsCircle = False
-        Me.BunifuPictureBox1.Location = New System.Drawing.Point(30, 20)
-        Me.BunifuPictureBox1.Name = "BunifuPictureBox1"
-        Me.BunifuPictureBox1.Size = New System.Drawing.Size(50, 50)
-        Me.BunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.BunifuPictureBox1.TabIndex = 3
-        Me.BunifuPictureBox1.TabStop = False
-        Me.BunifuPictureBox1.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
+        Me.BOTTOM.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.BOTTOM.Controls.Add(Me.comLabel)
+        Me.BOTTOM.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.BOTTOM.Location = New System.Drawing.Point(0, 455)
+        Me.BOTTOM.Margin = New System.Windows.Forms.Padding(0)
+        Me.BOTTOM.Name = "BOTTOM"
+        Me.BOTTOM.Size = New System.Drawing.Size(800, 45)
+        Me.BOTTOM.TabIndex = 5
         '
         'BunifuPictureBox2
         '
@@ -89,7 +92,7 @@ Partial Class Dashboard_Main
         Me.BunifuPictureBox2.BorderRadius = 38
         Me.BunifuPictureBox2.Image = CType(resources.GetObject("BunifuPictureBox2.Image"), System.Drawing.Image)
         Me.BunifuPictureBox2.IsCircle = True
-        Me.BunifuPictureBox2.Location = New System.Drawing.Point(17, 7)
+        Me.BunifuPictureBox2.Location = New System.Drawing.Point(17, -10)
         Me.BunifuPictureBox2.Margin = New System.Windows.Forms.Padding(10)
         Me.BunifuPictureBox2.Name = "BunifuPictureBox2"
         Me.BunifuPictureBox2.Size = New System.Drawing.Size(76, 76)
@@ -100,6 +103,7 @@ Partial Class Dashboard_Main
         '
         'floatingPanel
         '
+        Me.floatingPanel.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.floatingPanel.BackgroundColor = System.Drawing.Color.FromArgb(CType(CType(39, Byte), Integer), CType(CType(174, Byte), Integer), CType(CType(97, Byte), Integer))
         Me.floatingPanel.BackgroundImage = CType(resources.GetObject("floatingPanel.BackgroundImage"), System.Drawing.Image)
         Me.floatingPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -110,6 +114,8 @@ Partial Class Dashboard_Main
         Me.floatingPanel.Controls.Add(Me.history_btn)
         Me.floatingPanel.Controls.Add(Me.dashboard_btn)
         Me.floatingPanel.Location = New System.Drawing.Point(33, 180)
+        Me.floatingPanel.MaximumSize = New System.Drawing.Size(44, 169)
+        Me.floatingPanel.MinimumSize = New System.Drawing.Size(44, 169)
         Me.floatingPanel.Name = "floatingPanel"
         Me.floatingPanel.ShowBorders = True
         Me.floatingPanel.Size = New System.Drawing.Size(44, 169)
@@ -185,6 +191,8 @@ Partial Class Dashboard_Main
         '
         'TOP
         '
+        Me.TOP.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TOP.BackgroundColor = System.Drawing.Color.White
         Me.TOP.BackgroundImage = CType(resources.GetObject("TOP.BackgroundImage"), System.Drawing.Image)
         Me.TOP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
@@ -192,11 +200,11 @@ Partial Class Dashboard_Main
         Me.TOP.BorderRadius = 50
         Me.TOP.BorderThickness = 0
         Me.TOP.Controls.Add(Me.Label1)
-        Me.TOP.Location = New System.Drawing.Point(0, -19)
+        Me.TOP.Location = New System.Drawing.Point(0, -18)
         Me.TOP.Margin = New System.Windows.Forms.Padding(0)
         Me.TOP.Name = "TOP"
         Me.TOP.ShowBorders = True
-        Me.TOP.Size = New System.Drawing.Size(800, 81)
+        Me.TOP.Size = New System.Drawing.Size(800, 63)
         Me.TOP.TabIndex = 3
         '
         'Label1
@@ -204,10 +212,10 @@ Partial Class Dashboard_Main
         Me.Label1.BackColor = System.Drawing.Color.White
         Me.Label1.Font = New System.Drawing.Font("Segoe UI Semibold", 11.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(91, 26)
+        Me.Label1.Location = New System.Drawing.Point(86, 8)
         Me.Label1.Name = "Label1"
         Me.Label1.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
-        Me.Label1.Size = New System.Drawing.Size(241, 55)
+        Me.Label1.Size = New System.Drawing.Size(241, 63)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "SMART IRRIGATION SYSTEM"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -284,39 +292,88 @@ Partial Class Dashboard_Main
         'Cover
         '
         Me.Cover.BackColor = System.Drawing.Color.White
-        Me.Cover.Location = New System.Drawing.Point(17, 7)
+        Me.Cover.Location = New System.Drawing.Point(17, -10)
         Me.Cover.Name = "Cover"
         Me.Cover.Size = New System.Drawing.Size(76, 55)
         Me.Cover.TabIndex = 1
+        '
+        'Guna2DragControl1
+        '
+        Me.Guna2DragControl1.TargetControl = Me.TOP
+        '
+        'PARENT
+        '
+        Me.PARENT.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(245, Byte), Integer))
+        Me.PARENT.Controls.Add(Me.BunifuPictureBox3)
+        Me.PARENT.Controls.Add(Me.Cover)
+        Me.PARENT.Controls.Add(Me.BunifuPictureBox2)
+        Me.PARENT.Controls.Add(Me.TOP)
+        Me.PARENT.Controls.Add(Me.floatingPanel)
+        Me.PARENT.Controls.Add(Me.BODY)
+        Me.PARENT.Controls.Add(Me.BOTTOM)
+        Me.PARENT.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PARENT.Location = New System.Drawing.Point(0, 0)
+        Me.PARENT.Name = "PARENT"
+        Me.PARENT.Size = New System.Drawing.Size(800, 500)
+        Me.PARENT.TabIndex = 5
+        '
+        'BunifuPictureBox3
+        '
+        Me.BunifuPictureBox3.AllowFocused = False
+        Me.BunifuPictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BunifuPictureBox3.AutoSizeHeight = True
+        Me.BunifuPictureBox3.BackColor = System.Drawing.Color.White
+        Me.BunifuPictureBox3.BorderRadius = 25
+        Me.BunifuPictureBox3.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.Logo
+        Me.BunifuPictureBox3.IsCircle = False
+        Me.BunifuPictureBox3.Location = New System.Drawing.Point(30, 3)
+        Me.BunifuPictureBox3.Name = "BunifuPictureBox3"
+        Me.BunifuPictureBox3.Size = New System.Drawing.Size(50, 50)
+        Me.BunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BunifuPictureBox3.TabIndex = 4
+        Me.BunifuPictureBox3.TabStop = False
+        Me.BunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
+        '
+        'comLabel
+        '
+        Me.comLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.comLabel.Font = New System.Drawing.Font("Segoe UI Semibold", 9.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.comLabel.Location = New System.Drawing.Point(16, 6)
+        Me.comLabel.Name = "comLabel"
+        Me.comLabel.Size = New System.Drawing.Size(61, 33)
+        Me.comLabel.TabIndex = 0
+        Me.comLabel.Text = "COM"
+        Me.comLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Dashboard_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(250, Byte), Integer))
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(245, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 500)
-        Me.Controls.Add(Me.BunifuPictureBox1)
-        Me.Controls.Add(Me.Cover)
-        Me.Controls.Add(Me.BunifuPictureBox2)
-        Me.Controls.Add(Me.floatingPanel)
-        Me.Controls.Add(Me.BODY)
-        Me.Controls.Add(Me.TOP)
+        Me.Controls.Add(Me.PARENT)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(816, 539)
         Me.MinimumSize = New System.Drawing.Size(816, 539)
         Me.Name = "Dashboard_Main"
         Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Tag = "816, 539"
         Me.BODY.ResumeLayout(False)
-        CType(Me.BunifuPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.BOTTOM.ResumeLayout(False)
         CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         Me.floatingPanel.ResumeLayout(False)
         Me.TOP.ResumeLayout(False)
+        Me.PARENT.ResumeLayout(False)
+        CType(Me.BunifuPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
     Friend WithEvents floatingPanel As Bunifu.UI.WinForms.BunifuPanel
     Friend WithEvents TOP As Bunifu.UI.WinForms.BunifuPanel
     Friend WithEvents BODY As Panel
-    Friend WithEvents BunifuPictureBox1 As Bunifu.UI.WinForms.BunifuPictureBox
     Friend WithEvents BunifuPictureBox2 As Bunifu.UI.WinForms.BunifuPictureBox
     Friend WithEvents Label1 As Label
     Friend WithEvents dashboard_btn As Guna.UI2.WinForms.Guna2Button
@@ -325,4 +382,10 @@ Partial Class Dashboard_Main
     Friend WithEvents snackbar1 As Bunifu.UI.WinForms.BunifuSnackbar
     Friend WithEvents Main As Panel
     Friend WithEvents Cover As Label
+    Friend WithEvents Guna2DragControl1 As Guna.UI2.WinForms.Guna2DragControl
+    Friend WithEvents BOTTOM As Panel
+    Friend WithEvents PARENT As Panel
+    Friend WithEvents BunifuPictureBox3 As Bunifu.UI.WinForms.BunifuPictureBox
+    Friend WithEvents comLabel As Label
+    Friend WithEvents SerialPort1 As IO.Ports.SerialPort
 End Class
