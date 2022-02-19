@@ -22,3 +22,7 @@ C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.dll
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
+C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\CircularProgressBar.dll
+C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\WinFormAnimation.dll
+C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\CircularProgressBar.xml
+C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll

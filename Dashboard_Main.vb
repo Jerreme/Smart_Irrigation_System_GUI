@@ -15,6 +15,7 @@ Public Class Dashboard_Main
         thread1.Start()
         comsClass = New Coms()
         COMLISTENER.Start()
+        SERIALLISTENER.Start()
 
         setActiveBtnn(dashboard_btn)
     End Sub
@@ -80,7 +81,6 @@ Public Class Dashboard_Main
                 historyForm.Hide()
                 optionsForm.Hide()
             End Sub)
-
     End Sub
 
     Private Sub OpenForm(otherForm As Object)
@@ -94,7 +94,7 @@ Public Class Dashboard_Main
                 Main.Visible = False
             End If
             currentForm = CType(otherForm, Form)
-            'BODY.Controls.Add(currentForm)
+            'BODY.Controls.Add(currentForm) 'this is not necessary
 
             currentForm.Show()
             currentForm.BringToFront()
@@ -169,4 +169,151 @@ Public Class Dashboard_Main
         End If
     End Sub
 
+    Const chartMaximum As Integer = 100
+    Const chartMinimum As Integer = -10
+    Const ChartLimit As Integer = 30
+    Private Sub Dashboard_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        For i = 0 To ChartLimit Step 1
+            Chart1.Series("Humidity       ").Points.AddY(0)
+            If Chart1.Series(0).Points.Count = ChartLimit Then
+                Chart1.Series(0).Points.RemoveAt(0)
+            End If
+
+            Chart2.Series("Temperature").Points.AddY(0)
+            If Chart2.Series(0).Points.Count = ChartLimit Then
+                Chart2.Series(0).Points.RemoveAt(0)
+            End If
+        Next
+
+        Chart1.ChartAreas(0).AxisY.Maximum = chartMaximum
+        Chart1.ChartAreas(0).AxisY.Minimum = chartMinimum
+
+        Chart1.ChartAreas("ChartArea1").AxisY.LabelStyle.Enabled = True
+        Chart1.ChartAreas("ChartArea1").AxisX.LabelStyle.Enabled = True
+
+        Chart2.ChartAreas(0).AxisY.Maximum = chartMaximum
+        Chart2.ChartAreas(0).AxisY.Minimum = chartMinimum
+
+        Chart2.ChartAreas("ChartArea1").AxisY.LabelStyle.Enabled = True
+        Chart2.ChartAreas("ChartArea1").AxisX.LabelStyle.Enabled = True
+
+    End Sub
+
+    ' T for Temperature , H for Humidity, S for Sun, B for Battery
+    Dim T_DATA, T_Res, H_DATA, H_Res As String
+    Dim S_DATA, S_Res, B_DATA, B_Res As String
+
+    Dim Initial As String
+    Dim errorOccured As Boolean = False
+
+    Private Sub SERIALLISTENER_Tick(sender As Object, e As EventArgs) Handles SERIALLISTENER.Tick
+        If connected Then
+            Dim ReceivedData = serial_port.ReadExisting  '--> Read incoming serial data
+
+            Dim TB As New TextBox
+            TB.Multiline = True
+            TB.Text = ReceivedData   '--> Enter serial data into the textbox
+
+            If TB.Lines.Count > 0 Then
+                If Not Failures(TB.Lines(0).ToString) Then '---> If Not Failures Occured
+                    Dim temp As String
+
+                    temp = TB.Lines(0)
+                    Initial = temp.Substring(0, 1) ' ---> HUMIDITY DATA
+                    If Initial = "H" Then
+                        H_DATA = temp
+                    End If
+
+                    temp = TB.Lines(1)
+                    Initial = temp.Substring(0, 1) ' ---> TEMPERATURE DATA
+                    If Initial = "T" Then
+                        T_DATA = temp
+                    End If
+
+                    temp = TB.Lines(2)
+                    Initial = temp.Substring(0, 1) ' ---> SUN DATA
+                    If Initial = "S" Then
+                        S_DATA = temp
+                    End If
+
+                    temp = TB.Lines(3)
+                    Initial = temp.Substring(0, 1) ' ---> BATTERY DATA
+                    If Initial = "B" Then
+                        B_DATA = temp
+                    End If
+
+                    ' ˅ Get Result ˅
+                    H_Res = Mid(H_DATA, 2, H_DATA.Length)
+                    T_Res = Mid(T_DATA, 2, T_DATA.Length)
+                    S_Res = Mid(S_DATA, 2, S_DATA.Length)
+                    B_Res = Mid(B_DATA, 2, B_DATA.Length)
+
+                    ' ˅ Display Results ˅
+                    HumidVal.Text = H_Res & " %"
+                    TempVal.Text = T_Res & " °C"
+                    SunVal.Text = S_Res & " %"
+                    BattVal.Text = B_Res & " %"
+
+                    '-----------Enter the temperature and humidity values into the chart-----------------------------------
+                    ' ˅ Update Chart1 Maximum Value if needed ˅
+                    If H_Res > chartMaximum Then
+                        Chart1.ChartAreas(0).AxisY.Maximum = H_Res
+                    Else
+                        Chart1.ChartAreas(0).AxisY.Maximum = chartMaximum
+                    End If
+
+                    ' ˅ Update Chart2 Maximum Value if needed ˅
+                    If T_Res > chartMaximum Then
+                        Chart2.ChartAreas(0).AxisY.Maximum = T_Res
+                    Else
+                        Chart2.ChartAreas(0).AxisY.Maximum = chartMaximum
+                    End If
+
+                    ' ˅ Add Value to the Chart1 ˅
+                    Chart1.Series("Humidity       ").Points.AddY(H_Res)
+                    If Chart1.Series(0).Points.Count = ChartLimit Then
+                        Chart1.Series(0).Points.RemoveAt(0)
+                    End If
+
+                    ' ˅ Add Value to the Chart2 ˅
+                    Chart2.Series("Temperature").Points.AddY(T_Res)
+                    If Chart2.Series(0).Points.Count = ChartLimit Then
+                        Chart2.Series(0).Points.RemoveAt(0)
+                    End If
+                    '------------------------------------------------------------------------------------------------------
+
+                    '-----------Enter the Sun Value into the Circular Progress---------------------------------------------
+                    If Int(S_Res) >= sunLevel.Minimum AndAlso (S_Res) <= sunLevel.Maximum Then
+                        sunLevel.Value = Int(S_Res)
+                    End If
+                    '------------------------------------------------------------------------------------------------------
+
+                    '-----------Enter the Battery Value into the Battery Display-------------------------------------------
+                    If Int(B_Res) >= 0 AndAlso Int(B_Res) <= 100 Then
+                        Dim batt_height As Integer = (Int(B_Res) / 100) * 60 '--> 60 is the maximum height
+                        battLevel.Height = batt_height
+                    End If
+                    '------------------------------------------------------------------------------------------------------
+
+                End If
+                End If
+        End If
+    End Sub
+
+    Function Failures(firstLine As String) As Boolean
+        If firstLine.Equals("Failed to read from DHT sensor!") Then
+            If Not errorOccured Then
+                errorOccured = True
+                snackbar1.Show(
+                            Me,
+                            "Error Reading From Arduino Board",
+                            Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error,
+                            2000, "",
+                            Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight)
+            End If
+            Return True
+        End If
+
+        Return False
+    End Function
 End Class
