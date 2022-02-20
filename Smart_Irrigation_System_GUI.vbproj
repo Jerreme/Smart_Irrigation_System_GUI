@@ -70,14 +70,14 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox">
       <HintPath>..\..\Add-To-References\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar">
+      <HintPath>Add to Toolbox\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel">
       <HintPath>..\..\Add-To-References\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
       <HintPath>..\..\Add-To-References\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
-    </Reference>
-    <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
-      <HintPath>packages\CircularProgressBar.2.8.0.16\lib\net40\CircularProgressBar.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\Add-To-References\Guna.UI2.dll</HintPath>
@@ -95,9 +95,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="WinFormAnimation, Version=1.6.0.4, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
-      <HintPath>packages\WinFormAnimation.1.6.0.4\lib\net40\WinFormAnimation.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
@@ -148,10 +145,16 @@
     <Compile Include="Options.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SplashScreen1.Designer.vb">
+    <Compile Include="Other Forms\watering_Dialog.Designer.vb">
+      <DependentUpon>watering_Dialog.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Other Forms\watering_Dialog.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Other Forms\SplashScreen1.Designer.vb">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
     </Compile>
-    <Compile Include="SplashScreen1.vb">
+    <Compile Include="Other Forms\SplashScreen1.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -172,8 +175,11 @@
     <EmbeddedResource Include="Options.resx">
       <DependentUpon>Options.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SplashScreen1.resx">
+    <EmbeddedResource Include="Other Forms\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Other Forms\watering_Dialog.resx">
+      <DependentUpon>watering_Dialog.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -215,7 +221,6 @@
     <None Include="Icons\settings_48px_gr.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
     <None Include="Resources\settings_48px_gr.bmp" />
   </ItemGroup>
   <ItemGroup>
@@ -256,6 +261,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Icons\lightning_bolt_48px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\plant_icon14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\plant_icon4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\light_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\pump_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Images\plant4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

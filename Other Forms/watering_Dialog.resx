@@ -117,65 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="sun_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\sun_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="loadingBar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAANYAAAANCAYAAADVGpDCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEXSURBVGhD7ZlBaoNAFEA9Ro7QZZc5Qldd9xI9QG+RVW/S
+        ba+QG0RFRDCR0IIVHR37fxkYAj/TQujuPXgQ0J/d4zuaAcA/471/mud5vwJAEu1kWZZX+bkJ+djIje99
+        3380TbPmeY6ICbWTrus0sJNz7jFkdIlcfP4UrD9AxOuWZblO09TJ5roLOUUkrENd1+YgIqZt21Y311vI
+        KaLPjNYAIv6ubi05b32FnCKEhXibSsgpQliIt2mGJWvsWFWVOYCIaYui0EdBF3KK6MFLD2DWECKm1Vfv
+        0tA+5BSRLXY/juNJy7MGEfG6wzCcvfcPIadLpLgXievMB2LEv6mfqDQq59wuZGQj1W11pf2cxAAgibRy
+        sDdVln0DsBv4l4g05HsAAAAASUVORK5CYII=
+</value>
   </data>
-  <data name="bar_chart_48px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\bar_chart_48px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_48px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\settings_48px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="temperature_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\temperature_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plant6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\plant6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bar_chart_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\bar_chart_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\Logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plant_icon14" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\plant_icon14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="light_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\light_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="settings_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\settings_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plant3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\plant3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lightning_bolt_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\lightning_bolt_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hour_glass_48px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\hour_glass_48px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="humidity_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\humidity_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plant_icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\plant_icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="white" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="hour_glass_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\hour_glass_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pump_64px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\pump_64px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plant10" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\plant10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="plant4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\plant4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
+  <metadata name="Guna2DragControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="Timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>174, 19</value>
+  </metadata>
+  <metadata name="Timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>263, 19</value>
+  </metadata>
 </root>
