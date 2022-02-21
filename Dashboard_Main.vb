@@ -519,5 +519,6 @@ Public Class Dashboard_Main
             battLevel.ValueByTransition = B_Res
         End If
         '------------------------------------------------------------------------------------------------------
+
     End Sub
 End Class
