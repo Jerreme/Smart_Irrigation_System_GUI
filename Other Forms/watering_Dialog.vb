@@ -29,7 +29,6 @@ Public Class watering_Dialog
             End If
         End If
 
-
         If loadingBar.Value = 80 And Not done_sginal Then
             Timer1.Interval = 400
         ElseIf loadingBar.Value = 97 And Not done_sginal Then

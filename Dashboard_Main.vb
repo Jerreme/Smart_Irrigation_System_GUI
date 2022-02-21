@@ -9,15 +9,10 @@ Public Class Dashboard_Main
         ' Add any initialization after the InitializeComponent() call.
         'Me.DoubleBuffered = True '---> Uncomment if Flickerings occurs
 
-        'Assignment
-        thread1 = New Thread(New ThreadStart(AddressOf loadAllChilForms))
-        thread1.Start()
-        comsClass = New Coms()
+        'Start Up
+        LOADT_STARTUP_VALUES()
 
         COMLISTENER.Start()
-        SERIALLISTENER.Start()
-
-        setActiveBtn(dashboard_btn)
     End Sub
 
     '-----------------------------Variables---------------------------------------
@@ -25,7 +20,6 @@ Public Class Dashboard_Main
     Private active_btn As Guna.UI2.WinForms.Guna2Button
     Private active_btn_overrides As Guna.UI2.WinForms.Guna2Button
     Private active_btn_controls As Guna.UI2.WinForms.Guna2Button
-    Private thread1
 
     'Floating Buttons Colors
     Private ReadOnly foreground_col As Color = Color.FromArgb(64, 64, 64)
@@ -56,7 +50,7 @@ Public Class Dashboard_Main
 
     'Global Variables
     Private connected As Boolean = False
-    Private errorOccured As Boolean = False
+    Private errorOccured As Boolean = True
     Private lights_Active As Boolean = False
     Private pump_Active As Boolean = False
     Private watering_Active As Boolean = False
@@ -78,7 +72,25 @@ Public Class Dashboard_Main
 
     '-----------------------------End of Variables-----------------------------------
 
-    Private Sub Dashboard_Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Sub LOADT_STARTUP_VALUES()
+        historyForm = New History
+        historyForm.TopLevel = False
+        historyForm.Dock = DockStyle.Fill
+
+        optionsForm = New Options
+        optionsForm.TopLevel = False
+        optionsForm.Dock = DockStyle.Fill
+
+        BODY.Controls.Add(historyForm)
+        BODY.Controls.Add(optionsForm)
+
+        historyForm.Hide()
+        optionsForm.Hide()
+
+        comsClass = New Coms()
+        setActiveBtn(dashboard_btn)
+
+        '------------------Reset to Startup Values-------------------
         For i = 0 To ChartLimit Step 1
             Chart1.Series("Humidity       ").Points.AddY(0)
             If Chart1.Series(0).Points.Count = ChartLimit Then
@@ -96,25 +108,16 @@ Public Class Dashboard_Main
         Chart2.ChartAreas(0).AxisY.Maximum = chartMaximum
         Chart2.ChartAreas(0).AxisY.Minimum = chartMinimum
 
-    End Sub
+        HumidVal.Text = "0" & " %"
+        TempVal.Text = "0" & " %"
 
-    Sub loadAllChilForms()
-        historyForm = New History
-        historyForm.TopLevel = False
-        historyForm.Dock = DockStyle.Fill
+        sunLevel.ValueByTransition = 0
+        SunVal.Text = "0" & " %"
 
-        optionsForm = New Options
-        optionsForm.TopLevel = False
-        optionsForm.Dock = DockStyle.Fill
-
-        BODY.Invoke(
-            Sub()
-                BODY.Controls.Add(historyForm)
-                BODY.Controls.Add(optionsForm)
-
-                historyForm.Hide()
-                optionsForm.Hide()
-            End Sub)
+        battLevel.ValueByTransition = 0
+        BattVal.Text = "0" & " %"
+        voltLabel.Text = "-- --"
+        '--------------------------End-------------------------------
     End Sub
 
 
@@ -147,7 +150,7 @@ Public Class Dashboard_Main
     End Sub
 
     Sub setActiveBtn_plants(sender As Object)
-        If connected Then
+        If connected And Not errorOccured Then
             active_btn_overrides = CType(sender, Guna.UI2.WinForms.Guna2Button)
 
             If (active_btn_overrides IsNot plant1_btn) Then
@@ -168,7 +171,7 @@ Public Class Dashboard_Main
     End Sub
 
     Sub setActiveBtn_controls(sender As Object)
-        If connected Then
+        If connected And Not errorOccured Then
             active_btn_controls = CType(sender, Guna.UI2.WinForms.Guna2Button)
 
             active_btn_controls.ForeColor = Color.White
@@ -202,7 +205,7 @@ Public Class Dashboard_Main
                 Main.Visible = False
             End If
             currentForm = CType(otherForm, Form)
-            'BODY.Controls.Add(currentForm) 'this is not necessary
+            'BODY.Controls.Add(currentForm) '---> this is not necessary
 
             decor1.Visible = False
             currentForm.Show()
@@ -220,7 +223,7 @@ Public Class Dashboard_Main
     End Sub
 
     Sub send_Command(sender As Object)
-        If connected Then
+        If connected And Not errorOccured Then
             If (sender Is plant1_btn AndAlso Not watering_Active) Then
                 serial_port.Write("P") '--> send command to water plant1
                 watering_Active = True
@@ -234,12 +237,12 @@ Public Class Dashboard_Main
                 setBtn_To_Inactive(plant1_btn)
                 setBtn_To_Inactive(plant2_btn)
                 'plant2_btn.Enabled = True
+
                 If wateringDialog.DialogResult = DialogResult.OK Then
                     show_snackbar("Plant 1 watered recently", Succes_Type, TopRight_pos)
                 Else
                     show_snackbar("Error Occured while watering Plant 1", Error_Type, TopRight_pos)
                 End If
-
 
             ElseIf (sender Is plant2_btn AndAlso Not watering_Active) Then
                 serial_port.Write("p") '--> send command to water plant2
@@ -254,6 +257,7 @@ Public Class Dashboard_Main
                 setBtn_To_Inactive(plant1_btn)
                 setBtn_To_Inactive(plant2_btn)
                 'plant1_btn.Enabled = True
+
                 If wateringDialog.DialogResult = DialogResult.OK Then
                     show_snackbar("Plant 2 watered recently", Succes_Type, TopRight_pos)
                 Else
@@ -271,7 +275,7 @@ Public Class Dashboard_Main
                 serial_port.Write("U") '--> send command turn On Pump
                 pump_Active = True
             ElseIf (sender Is pump_btn And pump_Active) Then
-                serial_port.Write("U") '--> send command turn Off Pump
+                serial_port.Write("u") '--> send command turn Off Pump
                 pump_Active = False
             End If
         End If
@@ -347,11 +351,19 @@ Public Class Dashboard_Main
             connected = True
             comLabel.Text = comsClass.comPort
             comLabel.ForeColor = Color.FromArgb(54, 115, 169) 'Blue
+
+            If Not SERIALLISTENER.Enabled Then
+                SERIALLISTENER.Start()
+            End If
         ElseIf (res = 0) Then
-            show_snackbar("Arduino Board has been Disconnected", Warning_Type, TopRight_pos)
+            show_snackbar("Arduino Board is not connected", Warning_Type, TopRight_pos)
             connected = False
             comLabel.Text = "NOT CONNECTED"
             comLabel.ForeColor = Color.FromArgb(241, 74, 22) 'Red
+
+            If SERIALLISTENER.Enabled Then
+                SERIALLISTENER.Stop()
+            End If
         End If
     End Sub
 
@@ -373,6 +385,8 @@ Public Class Dashboard_Main
                             wateringDialog.done_sginal = True
                         ElseIf TB.Lines(0).Equals("Plant 2 Done :)") Then
                             wateringDialog.done_sginal = True
+                        ElseIf TB.Lines(0).Equals("Hi VB") Then
+                            serial_port.Write("?") '--> Reply to Arduino
                         End If
 
                     End If
@@ -384,15 +398,16 @@ Public Class Dashboard_Main
     End Sub
 
     Function Failures(firstLine As String) As Boolean
-        If firstLine.Equals("Failed to read from DHT sensor!") Then
-            If Not errorOccured Then
-                errorOccured = True
-                show_snackbar("Failed to read from DHT sensor!", Error_Type, TopCenter_pos)
-            End If
+        If firstLine.Equals("Device is not yet powered! [Delegate]") Then
+            show_snackbar("Device is not yet powered! [ACTION IS NEEDED]", Error_Type, TopCenter_pos)
+            errorOccured = True
+            comLabel.ForeColor = Color.FromArgb(241, 74, 22) 'Red
             Return True
+        Else
+            errorOccured = False
+            comLabel.ForeColor = Color.FromArgb(54, 115, 169) 'Blue
+            Return False
         End If
-
-        Return False
     End Function
 
     Sub show_snackbar(
@@ -478,7 +493,7 @@ Public Class Dashboard_Main
         End If
         '------------------------------------------------------------------------------------------------------
 
-        '-----------Enter the Sun Value into the Circular Progress---------------------------------------------
+        '-----------Enter the Sun Value into the Circular Progress Bar-----------------------------------------
         If Int(S_Res) >= sunLevel.Minimum AndAlso (S_Res) <= sunLevel.Maximum Then
             sunLevel.ValueByTransition = Int(S_Res)
         End If
@@ -486,7 +501,7 @@ Public Class Dashboard_Main
 
         '-----------Enter the Battery Value into the Battery Display-------------------------------------------
         If Int(B_Res) >= 0 AndAlso Int(B_Res) <= 100 Then
-            'Dim batt_height As Integer = (Int(B_Res) / 100) * 60 '--> 60 is the maximum height
+            'Dim batt_height As Integer = (Int(B_Res) / 100) * 60 '--> 60 is the maximum height '--> Old technique for Displaying Battery Level Indicator Graphic 
             'battLevel.Height = batt_height
 
             If Int(B_Res) < 100 Then

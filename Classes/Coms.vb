@@ -1,4 +1,5 @@
-﻿Public Class Coms
+﻿Imports System.Threading
+Public Class Coms
     Friend WithEvents my_serial_port As System.IO.Ports.SerialPort
 
     Public comPort As String = ""
@@ -12,6 +13,7 @@
             Try
                 If (Not my_serial_port.IsOpen) Then
                     my_serial_port.Open()
+                    'my_serial_port.Write("t")
                 End If
             Catch ex As Exception
                 Console.WriteLine("Err @Coms:connectComPort = ")
@@ -47,6 +49,7 @@
 
         If (checkComPort()) Then
             If (Not connected Or Not comPort.Equals(prevComPort)) Then
+                my_serial_port.Write("?")
                 prevComPort = comPort
                 connected = True
                 Return 1
