@@ -14,6 +14,7 @@ Public Class Dashboard_Main
 
         COMLISTENER.Start()
         SERIALLISTENER.Start()
+        dateListener.Start()
     End Sub
 
     '-----------------------------Variables---------------------------------------
@@ -360,6 +361,7 @@ Public Class Dashboard_Main
             If Not SERIALLISTENER.Enabled Then
                 SERIALLISTENER.Start()
             End If
+
         ElseIf (res = 0) Then
             show_snackbar("Arduino Board is not connected", Warning_Type, TopRight_pos)
             connected = False
@@ -422,6 +424,9 @@ Public Class Dashboard_Main
                 show_snackbar(ex.ToString, Error_Type, BottomCenter_pos)
             End Try
         End If
+    End Sub
+    Private Sub dateListener_Tick(sender As Object, e As EventArgs) Handles dateListener.Tick
+        dateLabel.Text = Date.Now.ToString("ddd").ToUpper + " " + Date.Now.ToString("t")
     End Sub
 
     Function Failures(firstLine As String) As Boolean

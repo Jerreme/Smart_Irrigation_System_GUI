@@ -81,6 +81,8 @@ Partial Class Dashboard_Main
         Me.serial_port = New System.IO.Ports.SerialPort(Me.components)
         Me.COMLISTENER = New System.Windows.Forms.Timer(Me.components)
         Me.SERIALLISTENER = New System.Windows.Forms.Timer(Me.components)
+        Me.dateLabel = New System.Windows.Forms.Label()
+        Me.dateListener = New System.Windows.Forms.Timer(Me.components)
         Me.BODY.SuspendLayout()
         Me.Main.SuspendLayout()
         Me.BunifuPanel5.SuspendLayout()
@@ -818,6 +820,7 @@ Partial Class Dashboard_Main
         Me.TOP.BorderColor = System.Drawing.Color.FromArgb(CType(CType(226, Byte), Integer), CType(CType(228, Byte), Integer), CType(CType(230, Byte), Integer))
         Me.TOP.BorderRadius = 50
         Me.TOP.BorderThickness = 1
+        Me.TOP.Controls.Add(Me.dateLabel)
         Me.TOP.Controls.Add(Me.Label1)
         Me.TOP.Location = New System.Drawing.Point(0, -18)
         Me.TOP.Margin = New System.Windows.Forms.Padding(0)
@@ -996,6 +999,22 @@ Partial Class Dashboard_Main
         '
         Me.SERIALLISTENER.Interval = 1000
         '
+        'dateLabel
+        '
+        Me.dateLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.dateLabel.BackColor = System.Drawing.Color.White
+        Me.dateLabel.Font = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dateLabel.Location = New System.Drawing.Point(637, 31)
+        Me.dateLabel.Name = "dateLabel"
+        Me.dateLabel.Size = New System.Drawing.Size(142, 23)
+        Me.dateLabel.TabIndex = 1
+        Me.dateLabel.Text = "Time"
+        Me.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'dateListener
+        '
+        Me.dateListener.Interval = 500
+        '
         'Dashboard_Main
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1092,4 +1111,6 @@ Partial Class Dashboard_Main
     Friend WithEvents battPanel As Panel
     Friend WithEvents battLevel As Bunifu.UI.WinForms.BunifuProgressBar
     Friend WithEvents battFull As Bunifu.UI.WinForms.BunifuPanel
+    Friend WithEvents dateLabel As Label
+    Friend WithEvents dateListener As Timer
 End Class
