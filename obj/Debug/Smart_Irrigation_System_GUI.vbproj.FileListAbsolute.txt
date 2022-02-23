@@ -27,3 +27,4 @@ C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.watering_Dialog.resources
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.bootingDevice_Dialog.resources
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll

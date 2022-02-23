@@ -1,0 +1,164 @@
+﻿1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+[8:16:10 PM] Humidity: 87% Temperature: 31°C Sun Intensity: 18% Battery: 67% Voltage: 3.94V
+[9:12:20 PM] Humidity: 85% Temperature: 31°C Sun Intensity: 18% Battery: 70% Voltage: 3.96V
+[9:12:30 PM] Humidity: 85% Temperature: 31°C Sun Intensity: 18% Battery: 70% Voltage: 3.96V
+[11:17:10 PM] Humidity: 95% Temperature: 30°C Sun Intensity: 19% Battery: 73% Voltage: 3.99V
+[11:17:20 PM] Humidity: 94% Temperature: 30°C Sun Intensity: 18% Battery: 73% Voltage: 3.99V
+[11:17:30 PM] Humidity: 94% Temperature: 30°C Sun Intensity: 18% Battery: 73% Voltage: 3.99V
+[11:17:40 PM] Humidity: 94% Temperature: 30°C Sun Intensity: 18% Battery: 73% Voltage: 3.99V
+[11:17:50 PM] Humidity: 93% Temperature: 30°C Sun Intensity: 18% Battery: 73% Voltage: 3.99V
+[11:18:00 PM] Humidity: 93% Temperature: 30°C Sun Intensity: 18% Battery: 73% Voltage: 3.99V
+[11:18:10 PM] Humidity: 93% Temperature: 30°C Sun Intensity: 19% Battery: 73% Voltage: 3.99V
+[11:18:20 PM] Humidity: 93% Temperature: 30°C Sun Intensity: 18% Battery: 73% Voltage: 3.99V
+[11:22:40 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 19% Battery: 76% Voltage: 4.01V
+[11:22:50 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:23:00 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:23:10 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:23:20 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:23:30 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 73% Voltage: 3.99V
+[11:23:40 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:28:10 PM] Humidity: 89% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:28:20 PM] Humidity: 89% Temperature: 30°C Sun Intensity: 19% Battery: 76% Voltage: 4.01V
+[11:28:30 PM] Humidity: 89% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:28:40 PM] Humidity: 89% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:28:50 PM] Humidity: 89% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:29:00 PM] Humidity: 89% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:29:10 PM] Humidity: 89% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:29:20 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:29:30 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:29:40 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:29:50 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:30:00 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:30:10 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:30:20 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:30:30 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:30:40 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:30:50 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:31:00 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:31:10 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 73% Voltage: 3.99V
+[11:31:20 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:31:30 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:31:40 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:31:50 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:32:00 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:32:10 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 82% Voltage: 4.06V
+[11:32:20 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:32:30 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:32:40 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 20% Battery: 76% Voltage: 4.01V
+[11:32:50 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:33:00 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 19% Battery: 76% Voltage: 4.01V
+[11:33:10 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:35:10 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:35:20 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:35:30 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:35:40 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:35:50 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:36:00 PM] Humidity: 91% Temperature: 30°C Sun Intensity: 19% Battery: 67% Voltage: 3.94V
+[11:36:10 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V
+[11:36:20 PM] Humidity: 90% Temperature: 30°C Sun Intensity: 18% Battery: 76% Voltage: 4.01V

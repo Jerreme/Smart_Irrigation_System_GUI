@@ -1,0 +1,16 @@
+﻿[02/24/22] [12:18:03 AM]: Device Disconnected
+[02/24/22] [12:18:21 AM]: Device Disconnected
+[02/24/22] [12:21:47 AM]: Device Disconnected
+[02/24/22] [12:25:59 AM]: Device Disconnected
+[02/24/22] [12:26:29 AM]: Device Disconnected
+[02/24/22] [12:26:34 AM]: Device Disconnected
+[02/24/22] [12:32:28 AM]: Device Disconnected
+[02/24/22] [12:33:09 AM]: Device Disconnected
+[02/24/22] [12:33:42 AM]: Device Disconnected
+[02/24/22] [12:33:49 AM]: Device Disconnected
+[02/24/22] [12:33:52 AM]: Device Failed to Boot
+[02/24/22] [12:45:45 AM]: Device Disconnected
+[02/24/22] [12:46:34 AM]: Device Disconnected
+[02/24/22] [12:48:21 AM]: Device Disconnected
+[02/24/22] [12:48:21 AM]: Watering Plant 1 Failed
+[02/24/22] [1:05:43 AM]: Device Disconnected

@@ -82,6 +82,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
       <HintPath>..\..\Add-To-References\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
+      <HintPath>Add to Toolbox\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
       <HintPath>Add to Toolbox\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
     </Reference>
@@ -117,6 +120,8 @@
   <ItemGroup>
     <Compile Include="ApplicationEvents.vb" />
     <Compile Include="Classes\Coms.vb" />
+    <Compile Include="Classes\FileHandling.vb" />
+    <Compile Include="Classes\TimeNow.vb" />
     <Compile Include="Dashboard_Main.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +299,10 @@
     <None Include="Images\plant4.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Icons\refresh_20px_b.png" />
+    <None Include="Icons\refresh_20px_c.png" />
+    <None Include="Icons\refresh_20px.png" />
+    <None Include="Images\plant2.png" />
     <Content Include="Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

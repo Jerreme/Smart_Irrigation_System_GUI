@@ -1,0 +1,20 @@
+﻿[02/24/22] [12:09:04 AM]: Lights Set On
+[02/24/22] [12:18:24 AM]: Device Connected
+[02/24/22] [12:22:29 AM]: Device Connected
+[02/24/22] [12:26:00 AM]: Device Connected
+[02/24/22] [12:26:31 AM]: Device Connected
+[02/24/22] [12:32:37 AM]: Device Connected
+[02/24/22] [12:33:17 AM]: Device Connected
+[02/24/22] [12:33:46 AM]: Device Connected
+[02/24/22] [12:33:59 AM]: Device Connected
+[02/24/22] [12:39:02 AM]: Device Connected
+[02/24/22] [12:39:37 AM]: Pump Set to On
+[02/24/22] [12:42:34 AM]: Device Connected
+[02/24/22] [12:46:53 AM]: Device Connected
+[02/24/22] [12:47:25 AM]: Lights Set to On
+[02/24/22] [12:47:41 AM]: Succesfully Watered Plant 2
+[02/24/22] [12:51:10 AM]: Device Connected
+[02/24/22] [12:55:51 AM]: Device Connected
+[02/24/22] [12:58:23 AM]: Device Connected
+[02/24/22] [12:58:28 AM]: Lights Set to On
+[02/24/22] [1:01:17 AM]: Watered Plant 2

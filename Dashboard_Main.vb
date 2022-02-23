@@ -15,6 +15,7 @@ Public Class Dashboard_Main
         COMLISTENER.Start()
         SERIALLISTENER.Start()
         dateListener.Start()
+        update_log.Start()
     End Sub
 
     '-----------------------------Variables---------------------------------------
@@ -45,6 +46,8 @@ Public Class Dashboard_Main
 
     'Classes
     Private comsClass As Coms
+    Private fileClass As FileHandling
+    Private timeClass As TimeNow
 
     'Constants
     Private Const chartMaximum As Integer = 100
@@ -62,6 +65,9 @@ Public Class Dashboard_Main
     Private T_DATA, T_Res, H_DATA, H_Res As String
     Private S_DATA, S_Res, B_DATA, B_Res As String
     Private V_DATA, V_Res, Initial As String
+
+    Private prev_sec As Integer = 0
+    Private curr_sec As Integer = 0
 
     'Snackbar Param Values
     Private ReadOnly Error_Type = Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes.Error
@@ -83,13 +89,16 @@ Public Class Dashboard_Main
         optionsForm.TopLevel = False
         optionsForm.Dock = DockStyle.Fill
 
-        BODY.Controls.Add(historyForm)
-        BODY.Controls.Add(optionsForm)
+        BODY_PANEL.Controls.Add(historyForm)
+        BODY_PANEL.Controls.Add(optionsForm)
 
         historyForm.Hide()
         optionsForm.Hide()
 
-        comsClass = New Coms()
+        comsClass = New Coms
+        fileClass = New FileHandling
+        timeClass = New TimeNow
+
         setActiveBtn(dashboard_btn)
     End Sub
 
@@ -200,7 +209,7 @@ Public Class Dashboard_Main
 
 
     Private Sub OpenForm(otherForm As Object)
-        BODY.SuspendLayout()
+        BODY_PANEL.SuspendLayout()
 
         If (otherForm Is historyForm Or otherForm Is optionsForm) Then
             If currentForm IsNot Nothing Then
@@ -209,7 +218,9 @@ Public Class Dashboard_Main
             If Main.Visible Then
                 Main.Visible = False
             End If
+
             currentForm = CType(otherForm, Form)
+            currentForm.Activate()
             'BODY.Controls.Add(currentForm) '---> this is not necessary
 
             decor1.Visible = False
@@ -224,7 +235,20 @@ Public Class Dashboard_Main
             Main.Visible = True
         End If
 
-        BODY.ResumeLayout()
+        BODY_PANEL.ResumeLayout()
+    End Sub
+
+    Private Sub write_Logs(text As String, type As String)
+        Dim Log As String =
+                   "[" & timeClass.Get_Date_Short("/") & "] " &
+                   "[" & timeClass.Get_Time_Long() & "]: " & text
+
+        If type.Equals("EVENTS") Then
+            fileClass.WriteTo_EventFile(Log)
+        ElseIf type.Equals("REPORTS") Then
+            fileClass.WriteTo_ReportFile(Log)
+        End If
+        historyForm.Update_DataBox(type, Log)
     End Sub
 
     Sub send_Command(sender As Object)
@@ -245,9 +269,13 @@ Public Class Dashboard_Main
 
                 If wateringDialog.DialogResult = DialogResult.OK Then
                     show_snackbar("Plant 1 watered recently", Succes_Type, TopRight_pos)
+                    write_Logs("Watered Plant 1", "EVENTS")
                 Else
                     show_snackbar("Watering Plant 1 failed", Error_Type, TopRight_pos)
+                    write_Logs("Watering Plant 1 Failed", "REPORTS")
                 End If
+
+
 
             ElseIf (sender Is plant2_btn AndAlso Not watering_Active) Then
                 serial_port.Write("p") '--> send command to water plant2
@@ -265,13 +293,16 @@ Public Class Dashboard_Main
 
                 If wateringDialog.DialogResult = DialogResult.OK Then
                     show_snackbar("Plant 2 watered recently", Succes_Type, TopRight_pos)
+                    write_Logs("Watered Plant 2", "EVENTS")
                 Else
                     show_snackbar("Watering Plant 2 failed", Error_Type, TopRight_pos)
+                    write_Logs("Watering Plant 2 Failed", "REPORTS")
                 End If
 
             ElseIf (sender Is lights_btn And Not lights_Active) Then
                 serial_port.Write("L") '--> send command turn On Lights
                 lights_Active = True
+                write_Logs("Lights Set to On", "EVENTS")
             ElseIf (sender Is lights_btn And lights_Active) Then
                 serial_port.Write("l") '--> send commandturn Off Lights
                 lights_Active = False
@@ -279,10 +310,12 @@ Public Class Dashboard_Main
             ElseIf (sender Is pump_btn And Not pump_Active) Then
                 serial_port.Write("U") '--> send command turn On Pump
                 pump_Active = True
+                write_Logs("Pump Set to On", "EVENTS")
             ElseIf (sender Is pump_btn And pump_Active) Then
                 serial_port.Write("u") '--> send command turn Off Pump
                 pump_Active = False
             End If
+
         End If
     End Sub
 
@@ -349,11 +382,34 @@ Public Class Dashboard_Main
     '----------------------------------End of Events----------------------------------------------
 
 
+    Private Sub update_log_Tick(sender As Object, e As EventArgs) Handles update_log.Tick
+        If connected And Not errorOccured Then
+            curr_sec = timeClass.Get_Seconds
+
+            If curr_sec Mod 10 = 0 And Not curr_sec = prev_sec Then
+                ' ˅ Write to DATA LOG ˅
+                Dim LOG As String =
+                    "[" & timeClass.Get_Time_Long & "]" &
+                    " Humidity: " & H_Res & "%" &
+                    " Temperature: " & T_Res & "°C" &
+                    " Sun Intensity: " & S_Res & "%" &
+                    " Battery: " & B_Res & "%" &
+                    " Voltage: " & V_Res & "V"
+                prev_sec = curr_sec
+                fileClass.WriteTo_DataFile(LOG)
+                historyForm.Update_DataBox("DATA", LOG)
+
+            End If
+        End If
+    End Sub
+
     Private Sub COMLISTENER_Tick(sender As Object, e As EventArgs) Handles COMLISTENER.Tick
         Dim res As Integer = comsClass.comListen(serial_port)
 
         If (res = 1) Then
             show_snackbar("Connected Succesfully", Information_Type, TopRight_pos)
+            write_Logs("Device Connected", "EVENTS")
+
             connected = True
             comLabel.Text = comsClass.comPort
             comLabel.ForeColor = Color.FromArgb(54, 115, 169) 'Blue
@@ -364,6 +420,8 @@ Public Class Dashboard_Main
 
         ElseIf (res = 0) Then
             show_snackbar("Arduino Board is not connected", Warning_Type, TopRight_pos)
+            write_Logs("Device Disconnected", "REPORTS")
+
             connected = False
             comLabel.Text = "NOT CONNECTED"
             comLabel.ForeColor = Color.FromArgb(241, 74, 22) 'Red
@@ -411,11 +469,16 @@ Public Class Dashboard_Main
                         ElseIf TB.Lines(0).Equals("Hi VB") Then
                             bootingDialog = New bootingDevice_Dialog
                             bootingDialog.ShowDialog() '--< Open the Booting Display
-                            If serial_port.IsOpen Then
-                                serial_port.Write("?") '--> Reply to Arduino
+
+                            If Not bootingDialog.DialogResult = DialogResult.OK Then
+                                write_Logs("Device Failed to Boot", "REPORTS")
                             End If
-                        ElseIf TB.Lines.Length > 3 Then
-                            Displays_Gathered_Data(TB)
+
+                            If serial_port.IsOpen Then
+                                    serial_port.Write("?") '--> Reply to Arduino
+                                End If
+                            ElseIf TB.Lines.Length > 3 Then
+                                Displays_Gathered_Data(TB)
                         End If
 
                     End If
@@ -425,13 +488,16 @@ Public Class Dashboard_Main
             End Try
         End If
     End Sub
+
     Private Sub dateListener_Tick(sender As Object, e As EventArgs) Handles dateListener.Tick
-        dateLabel.Text = Date.Now.ToString("ddd").ToUpper + " " + Date.Now.ToString("t")
+        dateLabel.Text = timeClass.Get_Day_Short.ToUpper + " " + timeClass.Get_Time_Short
     End Sub
 
     Function Failures(firstLine As String) As Boolean
         If firstLine.Equals("Device is not yet powered! [Delegate]") Then
             show_snackbar("Device is not yet powered! [ACTION IS NEEDED]", Error_Type, TopCenter_pos)
+            write_Logs("Device is not yet powered", "REPORTS")
+
             errorOccured = True
             comLabel.ForeColor = Color.FromArgb(241, 74, 22) 'Red
             Return True
@@ -449,6 +515,7 @@ Public Class Dashboard_Main
 
         snackbar1.Show(Me, text, type, 2000, "", pos)
     End Sub
+
 
     Sub Displays_Gathered_Data(TB As TextBox)
         Dim temp As String
@@ -496,6 +563,7 @@ Public Class Dashboard_Main
         SunVal.Text = S_Res & " %"
         BattVal.Text = B_Res & " %"
         voltLabel.Text = V_Res & " V"
+
 
         '-----------Enter the temperature and humidity values into the chart-----------------------------------
         ' ˅ Update Chart1 Maximum Value if needed ˅
