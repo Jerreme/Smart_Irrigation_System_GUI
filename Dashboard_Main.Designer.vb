@@ -24,12 +24,12 @@ Partial Class Dashboard_Main
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Dashboard_Main))
-        Dim ChartArea5 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend5 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series5 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
-        Dim ChartArea6 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
-        Dim Legend6 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
-        Dim Series6 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea1 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend1 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series1 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
+        Dim ChartArea2 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend2 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series2 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.BODY = New System.Windows.Forms.Panel()
         Me.Main = New System.Windows.Forms.Panel()
         Me.BunifuPanel5 = New Bunifu.UI.WinForms.BunifuPanel()
@@ -83,6 +83,7 @@ Partial Class Dashboard_Main
         Me.COMLISTENER = New System.Windows.Forms.Timer(Me.components)
         Me.SERIALLISTENER = New System.Windows.Forms.Timer(Me.components)
         Me.dateListener = New System.Windows.Forms.Timer(Me.components)
+        Me.BunifuToolTip1 = New Bunifu.UI.WinForms.BunifuToolTip(Me.components)
         Me.BODY.SuspendLayout()
         Me.Main.SuspendLayout()
         Me.BunifuPanel5.SuspendLayout()
@@ -121,6 +122,9 @@ Partial Class Dashboard_Main
         Me.BODY.Name = "BODY"
         Me.BODY.Size = New System.Drawing.Size(800, 415)
         Me.BODY.TabIndex = 4
+        Me.BunifuToolTip1.SetToolTip(Me.BODY, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BODY, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BODY, "")
         '
         'Main
         '
@@ -138,6 +142,9 @@ Partial Class Dashboard_Main
         Me.Main.Name = "Main"
         Me.Main.Size = New System.Drawing.Size(800, 415)
         Me.Main.TabIndex = 0
+        Me.BunifuToolTip1.SetToolTip(Me.Main, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Main, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Main, "")
         '
         'BunifuPanel5
         '
@@ -156,6 +163,9 @@ Partial Class Dashboard_Main
         Me.BunifuPanel5.ShowBorders = True
         Me.BunifuPanel5.Size = New System.Drawing.Size(297, 83)
         Me.BunifuPanel5.TabIndex = 13
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuPanel5, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPanel5, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPanel5, "")
         '
         'pump_btn
         '
@@ -184,6 +194,9 @@ Partial Class Dashboard_Main
         Me.pump_btn.Tag = "255, 216, 102"
         Me.pump_btn.Text = "Pump"
         Me.pump_btn.TextOffset = New System.Drawing.Point(-7, -18)
+        Me.BunifuToolTip1.SetToolTip(Me.pump_btn, "Turn On/Off pump")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.pump_btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.pump_btn, "")
         '
         'lights_btn
         '
@@ -212,6 +225,9 @@ Partial Class Dashboard_Main
         Me.lights_btn.Tag = "245, 242, 233"
         Me.lights_btn.Text = "Lights"
         Me.lights_btn.TextOffset = New System.Drawing.Point(-7, -18)
+        Me.BunifuToolTip1.SetToolTip(Me.lights_btn, "Turn On/Off lights")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.lights_btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.lights_btn, "")
         '
         'Label6
         '
@@ -225,6 +241,9 @@ Partial Class Dashboard_Main
         Me.Label6.TabIndex = 21
         Me.Label6.Text = "Controls"
         Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.Label6, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label6, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label6, "")
         '
         'BunifuPanel4
         '
@@ -243,6 +262,9 @@ Partial Class Dashboard_Main
         Me.BunifuPanel4.ShowBorders = True
         Me.BunifuPanel4.Size = New System.Drawing.Size(343, 83)
         Me.BunifuPanel4.TabIndex = 12
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuPanel4, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPanel4, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPanel4, "")
         '
         'plant2_btn
         '
@@ -270,6 +292,9 @@ Partial Class Dashboard_Main
         Me.plant2_btn.TabIndex = 23
         Me.plant2_btn.Text = "Plant 2"
         Me.plant2_btn.TextOffset = New System.Drawing.Point(-7, -18)
+        Me.BunifuToolTip1.SetToolTip(Me.plant2_btn, "Waters Plant 2")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.plant2_btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.plant2_btn, "")
         '
         'plant1_btn
         '
@@ -297,6 +322,9 @@ Partial Class Dashboard_Main
         Me.plant1_btn.TabIndex = 22
         Me.plant1_btn.Text = "Plant 1"
         Me.plant1_btn.TextOffset = New System.Drawing.Point(-7, -18)
+        Me.BunifuToolTip1.SetToolTip(Me.plant1_btn, "Waters Plant 1")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.plant1_btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.plant1_btn, "")
         '
         'Label5
         '
@@ -310,6 +338,9 @@ Partial Class Dashboard_Main
         Me.Label5.TabIndex = 20
         Me.Label5.Text = "Manual Override"
         Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.Label5, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label5, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label5, "")
         '
         'BunifuPanel2
         '
@@ -330,6 +361,9 @@ Partial Class Dashboard_Main
         Me.BunifuPanel2.ShowBorders = True
         Me.BunifuPanel2.Size = New System.Drawing.Size(220, 140)
         Me.BunifuPanel2.TabIndex = 11
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuPanel2, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPanel2, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPanel2, "")
         '
         'battPanel
         '
@@ -340,6 +374,9 @@ Partial Class Dashboard_Main
         Me.battPanel.Name = "battPanel"
         Me.battPanel.Size = New System.Drawing.Size(45, 73)
         Me.battPanel.TabIndex = 20
+        Me.BunifuToolTip1.SetToolTip(Me.battPanel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.battPanel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.battPanel, "")
         '
         'battLevel
         '
@@ -366,6 +403,9 @@ Partial Class Dashboard_Main
         Me.battLevel.RightToLeft = System.Windows.Forms.RightToLeft.No
         Me.battLevel.Size = New System.Drawing.Size(45, 65)
         Me.battLevel.TabIndex = 20
+        Me.BunifuToolTip1.SetToolTip(Me.battLevel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.battLevel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.battLevel, "")
         Me.battLevel.Value = 50
         Me.battLevel.ValueByTransition = 50
         '
@@ -383,6 +423,9 @@ Partial Class Dashboard_Main
         Me.battFull.ShowBorders = True
         Me.battFull.Size = New System.Drawing.Size(18, 20)
         Me.battFull.TabIndex = 14
+        Me.BunifuToolTip1.SetToolTip(Me.battFull, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.battFull, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.battFull, "")
         '
         'voltLabel
         '
@@ -395,6 +438,9 @@ Partial Class Dashboard_Main
         Me.voltLabel.TabIndex = 12
         Me.voltLabel.Text = "3.87 V"
         Me.voltLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.voltLabel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.voltLabel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.voltLabel, "")
         '
         'Label3
         '
@@ -407,6 +453,9 @@ Partial Class Dashboard_Main
         Me.Label3.Size = New System.Drawing.Size(44, 13)
         Me.Label3.TabIndex = 18
         Me.Label3.Text = "Battery"
+        Me.BunifuToolTip1.SetToolTip(Me.Label3, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label3, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label3, "")
         '
         'PictureBox6
         '
@@ -418,6 +467,9 @@ Partial Class Dashboard_Main
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox6.TabIndex = 9
         Me.PictureBox6.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.PictureBox6, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.PictureBox6, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.PictureBox6, "")
         '
         'BattVal
         '
@@ -431,6 +483,9 @@ Partial Class Dashboard_Main
         Me.BattVal.TabIndex = 8
         Me.BattVal.Text = "55 %"
         Me.BattVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.BattVal, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BattVal, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BattVal, "")
         '
         'BunifuPanel1
         '
@@ -451,6 +506,9 @@ Partial Class Dashboard_Main
         Me.BunifuPanel1.ShowBorders = True
         Me.BunifuPanel1.Size = New System.Drawing.Size(220, 140)
         Me.BunifuPanel1.TabIndex = 10
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuPanel1, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPanel1, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPanel1, "")
         '
         'Label2
         '
@@ -462,6 +520,9 @@ Partial Class Dashboard_Main
         Me.Label2.Size = New System.Drawing.Size(75, 13)
         Me.Label2.TabIndex = 17
         Me.Label2.Text = "Sun Intensity"
+        Me.BunifuToolTip1.SetToolTip(Me.Label2, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label2, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label2, "")
         '
         'sunLevel
         '
@@ -497,6 +558,9 @@ Partial Class Dashboard_Main
         Me.sunLevel.TabIndex = 16
         Me.sunLevel.Text = "30"
         Me.sunLevel.TextMargin = New System.Windows.Forms.Padding(0, 3, 0, 0)
+        Me.BunifuToolTip1.SetToolTip(Me.sunLevel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.sunLevel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.sunLevel, "")
         Me.sunLevel.Value = 30
         Me.sunLevel.ValueByTransition = 30
         Me.sunLevel.ValueMargin = New System.Windows.Forms.Padding(0, 3, 0, 0)
@@ -513,6 +577,9 @@ Partial Class Dashboard_Main
         Me.SunVal.TabIndex = 7
         Me.SunVal.Text = "30 %"
         Me.SunVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.SunVal, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.SunVal, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.SunVal, "")
         '
         'PictureBox5
         '
@@ -524,6 +591,9 @@ Partial Class Dashboard_Main
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox5.TabIndex = 8
         Me.PictureBox5.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.PictureBox5, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.PictureBox5, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.PictureBox5, "")
         '
         'chart2_panel
         '
@@ -535,6 +605,9 @@ Partial Class Dashboard_Main
         Me.chart2_panel.Name = "chart2_panel"
         Me.chart2_panel.Size = New System.Drawing.Size(420, 140)
         Me.chart2_panel.TabIndex = 9
+        Me.BunifuToolTip1.SetToolTip(Me.chart2_panel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.chart2_panel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.chart2_panel, "")
         '
         'PictureBox4
         '
@@ -546,6 +619,9 @@ Partial Class Dashboard_Main
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox4.TabIndex = 5
         Me.PictureBox4.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.PictureBox4, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.PictureBox4, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.PictureBox4, "")
         '
         'TempVal
         '
@@ -558,45 +634,51 @@ Partial Class Dashboard_Main
         Me.TempVal.TabIndex = 7
         Me.TempVal.Text = "40 °C"
         Me.TempVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.TempVal, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.TempVal, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.TempVal, "")
         '
         'Chart2
         '
-        ChartArea5.AxisX.IsLabelAutoFit = False
-        ChartArea5.AxisX.LabelStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea5.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
-        ChartArea5.AxisX.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.AxisY.IsLabelAutoFit = False
-        ChartArea5.AxisY.LabelStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea5.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
-        ChartArea5.AxisY.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.AxisY.MinorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.BorderColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea5.Name = "ChartArea1"
-        Me.Chart2.ChartAreas.Add(ChartArea5)
-        Legend5.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Legend5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
-        Legend5.IsTextAutoFit = False
-        Legend5.Name = "Legend1"
-        Me.Chart2.Legends.Add(Legend5)
+        ChartArea1.AxisX.IsLabelAutoFit = False
+        ChartArea1.AxisX.LabelStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        ChartArea1.AxisX.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.AxisY.IsLabelAutoFit = False
+        ChartArea1.AxisY.LabelStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        ChartArea1.AxisY.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.AxisY.MinorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.BorderColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea1.Name = "ChartArea1"
+        Me.Chart2.ChartAreas.Add(ChartArea1)
+        Legend1.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Legend1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        Legend1.IsTextAutoFit = False
+        Legend1.Name = "Legend1"
+        Me.Chart2.Legends.Add(Legend1)
         Me.Chart2.Location = New System.Drawing.Point(0, 0)
         Me.Chart2.Margin = New System.Windows.Forms.Padding(0)
         Me.Chart2.Name = "Chart2"
-        Series5.BorderWidth = 2
-        Series5.ChartArea = "ChartArea1"
-        Series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series5.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
-        Series5.Legend = "Legend1"
-        Series5.Name = "Temperature"
-        Me.Chart2.Series.Add(Series5)
+        Series1.BorderWidth = 2
+        Series1.ChartArea = "ChartArea1"
+        Series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
+        Series1.Color = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(0, Byte), Integer))
+        Series1.Legend = "Legend1"
+        Series1.Name = "Temperature"
+        Me.Chart2.Series.Add(Series1)
         Me.Chart2.Size = New System.Drawing.Size(420, 140)
         Me.Chart2.TabIndex = 3
         Me.Chart2.Tag = "255, 153, 0"
         Me.Chart2.Text = "Chart2"
+        Me.BunifuToolTip1.SetToolTip(Me.Chart2, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Chart2, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Chart2, "")
         '
         'chart1_panel
         '
@@ -608,6 +690,9 @@ Partial Class Dashboard_Main
         Me.chart1_panel.Name = "chart1_panel"
         Me.chart1_panel.Size = New System.Drawing.Size(420, 140)
         Me.chart1_panel.TabIndex = 8
+        Me.BunifuToolTip1.SetToolTip(Me.chart1_panel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.chart1_panel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.chart1_panel, "")
         '
         'PictureBox3
         '
@@ -619,6 +704,9 @@ Partial Class Dashboard_Main
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox3.TabIndex = 4
         Me.PictureBox3.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.PictureBox3, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.PictureBox3, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.PictureBox3, "")
         '
         'HumidVal
         '
@@ -631,42 +719,48 @@ Partial Class Dashboard_Main
         Me.HumidVal.TabIndex = 6
         Me.HumidVal.Text = "80 %"
         Me.HumidVal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.BunifuToolTip1.SetToolTip(Me.HumidVal, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.HumidVal, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.HumidVal, "")
         '
         'Chart1
         '
-        ChartArea6.AxisX.IsLabelAutoFit = False
-        ChartArea6.AxisX.LabelStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea6.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
-        ChartArea6.AxisX.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea6.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea6.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea6.AxisY.IsLabelAutoFit = False
-        ChartArea6.AxisY.LabelStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        ChartArea6.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
-        ChartArea6.AxisY.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea6.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea6.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
-        ChartArea6.Name = "ChartArea1"
-        Me.Chart1.ChartAreas.Add(ChartArea6)
-        Legend6.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Legend6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
-        Legend6.IsTextAutoFit = False
-        Legend6.Name = "Legend1"
-        Me.Chart1.Legends.Add(Legend6)
+        ChartArea2.AxisX.IsLabelAutoFit = False
+        ChartArea2.AxisX.LabelStyle.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea2.AxisX.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        ChartArea2.AxisX.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea2.AxisX.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea2.AxisX.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea2.AxisY.IsLabelAutoFit = False
+        ChartArea2.AxisY.LabelStyle.Font = New System.Drawing.Font("Segoe UI Semibold", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        ChartArea2.AxisY.LabelStyle.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        ChartArea2.AxisY.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea2.AxisY.MajorGrid.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea2.AxisY.MajorTickMark.LineColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer))
+        ChartArea2.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea2)
+        Legend2.Font = New System.Drawing.Font("Segoe UI", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Legend2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        Legend2.IsTextAutoFit = False
+        Legend2.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend2)
         Me.Chart1.Location = New System.Drawing.Point(0, 0)
         Me.Chart1.Margin = New System.Windows.Forms.Padding(0)
         Me.Chart1.Name = "Chart1"
-        Series6.BorderWidth = 2
-        Series6.ChartArea = "ChartArea1"
-        Series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
-        Series6.Color = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
-        Series6.Legend = "Legend1"
-        Series6.Name = "Humidity       "
-        Me.Chart1.Series.Add(Series6)
+        Series2.BorderWidth = 2
+        Series2.ChartArea = "ChartArea1"
+        Series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline
+        Series2.Color = System.Drawing.Color.FromArgb(CType(CType(96, Byte), Integer), CType(CType(180, Byte), Integer), CType(CType(249, Byte), Integer))
+        Series2.Legend = "Legend1"
+        Series2.Name = "Humidity       "
+        Me.Chart1.Series.Add(Series2)
         Me.Chart1.Size = New System.Drawing.Size(420, 140)
         Me.Chart1.TabIndex = 2
         Me.Chart1.Tag = "96, 180, 249"
         Me.Chart1.Text = "Chart1"
+        Me.BunifuToolTip1.SetToolTip(Me.Chart1, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Chart1, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Chart1, "")
         '
         'PictureBox2
         '
@@ -678,6 +772,9 @@ Partial Class Dashboard_Main
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.PictureBox2, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.PictureBox2, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.PictureBox2, "")
         '
         'PictureBox1
         '
@@ -691,6 +788,9 @@ Partial Class Dashboard_Main
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         Me.PictureBox1.Tag = "211, 280"
+        Me.BunifuToolTip1.SetToolTip(Me.PictureBox1, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.PictureBox1, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.PictureBox1, "")
         '
         'BOTTOM
         '
@@ -703,6 +803,9 @@ Partial Class Dashboard_Main
         Me.BOTTOM.Name = "BOTTOM"
         Me.BOTTOM.Size = New System.Drawing.Size(800, 40)
         Me.BOTTOM.TabIndex = 5
+        Me.BunifuToolTip1.SetToolTip(Me.BOTTOM, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BOTTOM, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BOTTOM, "")
         '
         'decor1
         '
@@ -715,6 +818,9 @@ Partial Class Dashboard_Main
         Me.decor1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.decor1.TabIndex = 1
         Me.decor1.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.decor1, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.decor1, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.decor1, "")
         '
         'comLabel
         '
@@ -728,6 +834,9 @@ Partial Class Dashboard_Main
         Me.comLabel.TabIndex = 0
         Me.comLabel.Text = "COM"
         Me.comLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuToolTip1.SetToolTip(Me.comLabel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.comLabel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.comLabel, "")
         '
         'snackbar1
         '
@@ -805,6 +914,9 @@ Partial Class Dashboard_Main
         Me.Cover.Name = "Cover"
         Me.Cover.Size = New System.Drawing.Size(76, 46)
         Me.Cover.TabIndex = 1
+        Me.BunifuToolTip1.SetToolTip(Me.Cover, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Cover, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Cover, "")
         '
         'dragControl
         '
@@ -826,6 +938,9 @@ Partial Class Dashboard_Main
         Me.TOP.ShowBorders = True
         Me.TOP.Size = New System.Drawing.Size(818, 63)
         Me.TOP.TabIndex = 3
+        Me.BunifuToolTip1.SetToolTip(Me.TOP, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.TOP, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.TOP, "")
         '
         'dateLabel
         '
@@ -838,6 +953,9 @@ Partial Class Dashboard_Main
         Me.dateLabel.TabIndex = 1
         Me.dateLabel.Text = "Time"
         Me.dateLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.BunifuToolTip1.SetToolTip(Me.dateLabel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.dateLabel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.dateLabel, "")
         '
         'Label1
         '
@@ -851,6 +969,9 @@ Partial Class Dashboard_Main
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "SMART IRRIGATION SYSTEM"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.BunifuToolTip1.SetToolTip(Me.Label1, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.Label1, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.Label1, "")
         '
         'PARENT
         '
@@ -867,6 +988,9 @@ Partial Class Dashboard_Main
         Me.PARENT.Name = "PARENT"
         Me.PARENT.Size = New System.Drawing.Size(800, 500)
         Me.PARENT.TabIndex = 5
+        Me.BunifuToolTip1.SetToolTip(Me.PARENT, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.PARENT, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.PARENT, "")
         '
         'BunifuPictureBox3
         '
@@ -883,6 +1007,9 @@ Partial Class Dashboard_Main
         Me.BunifuPictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.BunifuPictureBox3.TabIndex = 4
         Me.BunifuPictureBox3.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuPictureBox3, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPictureBox3, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPictureBox3, "")
         Me.BunifuPictureBox3.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
         '
         'BunifuPictureBox2
@@ -901,6 +1028,9 @@ Partial Class Dashboard_Main
         Me.BunifuPictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.BunifuPictureBox2.TabIndex = 3
         Me.BunifuPictureBox2.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuPictureBox2, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPictureBox2, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPictureBox2, "")
         Me.BunifuPictureBox2.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
         '
         'floatingPanel
@@ -922,6 +1052,9 @@ Partial Class Dashboard_Main
         Me.floatingPanel.ShowBorders = True
         Me.floatingPanel.Size = New System.Drawing.Size(44, 169)
         Me.floatingPanel.TabIndex = 2
+        Me.BunifuToolTip1.SetToolTip(Me.floatingPanel, "")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.floatingPanel, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.floatingPanel, "")
         '
         'options_btn
         '
@@ -947,6 +1080,9 @@ Partial Class Dashboard_Main
         Me.options_btn.ShadowDecoration.Parent = Me.options_btn
         Me.options_btn.Size = New System.Drawing.Size(34, 34)
         Me.options_btn.TabIndex = 7
+        Me.BunifuToolTip1.SetToolTip(Me.options_btn, "View Options")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.options_btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.options_btn, "")
         '
         'history_btn
         '
@@ -972,6 +1108,9 @@ Partial Class Dashboard_Main
         Me.history_btn.ShadowDecoration.Parent = Me.history_btn
         Me.history_btn.Size = New System.Drawing.Size(34, 34)
         Me.history_btn.TabIndex = 7
+        Me.BunifuToolTip1.SetToolTip(Me.history_btn, "View Log")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.history_btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.history_btn, "")
         '
         'dashboard_btn
         '
@@ -997,6 +1136,9 @@ Partial Class Dashboard_Main
         Me.dashboard_btn.Size = New System.Drawing.Size(34, 34)
         Me.dashboard_btn.TabIndex = 7
         Me.dashboard_btn.Tag = "57, 163, 103"
+        Me.BunifuToolTip1.SetToolTip(Me.dashboard_btn, "View Dashboard")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.dashboard_btn, Nothing)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.dashboard_btn, "")
         '
         'serial_port
         '
@@ -1012,6 +1154,41 @@ Partial Class Dashboard_Main
         'dateListener
         '
         Me.dateListener.Interval = 500
+        '
+        'BunifuToolTip1
+        '
+        Me.BunifuToolTip1.Active = True
+        Me.BunifuToolTip1.AlignTextWithTitle = False
+        Me.BunifuToolTip1.AllowAutoClose = False
+        Me.BunifuToolTip1.AllowFading = True
+        Me.BunifuToolTip1.AutoCloseDuration = 5000
+        Me.BunifuToolTip1.BackColor = System.Drawing.SystemColors.Control
+        Me.BunifuToolTip1.BorderColor = System.Drawing.Color.Gainsboro
+        Me.BunifuToolTip1.ClickToShowDisplayControl = False
+        Me.BunifuToolTip1.ConvertNewlinesToBreakTags = True
+        Me.BunifuToolTip1.DisplayControl = Nothing
+        Me.BunifuToolTip1.EntryAnimationSpeed = 350
+        Me.BunifuToolTip1.ExitAnimationSpeed = 200
+        Me.BunifuToolTip1.GenerateAutoCloseDuration = False
+        Me.BunifuToolTip1.IconMargin = 6
+        Me.BunifuToolTip1.InitialDelay = 0
+        Me.BunifuToolTip1.Name = "BunifuToolTip1"
+        Me.BunifuToolTip1.Opacity = 1.0R
+        Me.BunifuToolTip1.OverrideToolTipTitles = False
+        Me.BunifuToolTip1.Padding = New System.Windows.Forms.Padding(10)
+        Me.BunifuToolTip1.ReshowDelay = 100
+        Me.BunifuToolTip1.ShowAlways = True
+        Me.BunifuToolTip1.ShowBorders = False
+        Me.BunifuToolTip1.ShowIcons = True
+        Me.BunifuToolTip1.ShowShadows = True
+        Me.BunifuToolTip1.Tag = Nothing
+        Me.BunifuToolTip1.TextFont = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.BunifuToolTip1.TextForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
+        Me.BunifuToolTip1.TextMargin = 2
+        Me.BunifuToolTip1.TitleFont = New System.Drawing.Font("Segoe UI", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.BunifuToolTip1.TitleForeColor = System.Drawing.Color.Black
+        Me.BunifuToolTip1.ToolTipPosition = New System.Drawing.Point(0, 0)
+        Me.BunifuToolTip1.ToolTipTitle = Nothing
         '
         'Dashboard_Main
         '
@@ -1112,4 +1289,5 @@ Partial Class Dashboard_Main
     Friend WithEvents battFull As Bunifu.UI.WinForms.BunifuPanel
     Friend WithEvents dateLabel As Label
     Friend WithEvents dateListener As Timer
+    Friend WithEvents BunifuToolTip1 As Bunifu.UI.WinForms.BunifuToolTip
 End Class

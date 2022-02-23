@@ -82,6 +82,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar">
       <HintPath>..\..\Add-To-References\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip">
+      <HintPath>Add to Toolbox\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
     <Reference Include="Guna.UI2">
       <HintPath>..\..\Add-To-References\Guna.UI2.dll</HintPath>
     </Reference>
