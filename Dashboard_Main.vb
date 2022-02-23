@@ -1,5 +1,4 @@
-﻿Imports System.Threading
-
+﻿
 Public Class Dashboard_Main
     Sub New()
 
@@ -11,8 +10,10 @@ Public Class Dashboard_Main
 
         'Start Up
         LOADT_STARTUP_VALUES()
+        ResetDisplay(ChartLimit, True)
 
         COMLISTENER.Start()
+        SERIALLISTENER.Start()
     End Sub
 
     '-----------------------------Variables---------------------------------------
@@ -39,6 +40,7 @@ Public Class Dashboard_Main
     Private optionsForm As Options
     Private currentForm As Form
     Private wateringDialog As watering_Dialog
+    Private bootingDialog As bootingDevice_Dialog
 
     'Classes
     Private comsClass As Coms
@@ -69,7 +71,6 @@ Public Class Dashboard_Main
     Private ReadOnly TopRight_pos = Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopRight
     Private ReadOnly TopCenter_pos = Bunifu.UI.WinForms.BunifuSnackbar.Positions.TopCenter
     Private ReadOnly BottomCenter_pos = Bunifu.UI.WinForms.BunifuSnackbar.Positions.BottomCenter
-
     '-----------------------------End of Variables-----------------------------------
 
     Sub LOADT_STARTUP_VALUES()
@@ -89,9 +90,11 @@ Public Class Dashboard_Main
 
         comsClass = New Coms()
         setActiveBtn(dashboard_btn)
+    End Sub
 
+    Private Sub ResetDisplay(limit As Integer, updateBounds As Boolean)
         '------------------Reset to Startup Values-------------------
-        For i = 0 To ChartLimit Step 1
+        For i = 0 To limit Step 1
             Chart1.Series("Humidity       ").Points.AddY(0)
             If Chart1.Series(0).Points.Count = ChartLimit Then
                 Chart1.Series(0).Points.RemoveAt(0)
@@ -103,10 +106,12 @@ Public Class Dashboard_Main
             End If
         Next
 
-        Chart1.ChartAreas(0).AxisY.Maximum = chartMaximum
-        Chart1.ChartAreas(0).AxisY.Minimum = chartMinimum
-        Chart2.ChartAreas(0).AxisY.Maximum = chartMaximum
-        Chart2.ChartAreas(0).AxisY.Minimum = chartMinimum
+        If updateBounds Then
+            Chart1.ChartAreas(0).AxisY.Maximum = chartMaximum
+            Chart1.ChartAreas(0).AxisY.Minimum = chartMinimum
+            Chart2.ChartAreas(0).AxisY.Maximum = chartMaximum
+            Chart2.ChartAreas(0).AxisY.Minimum = chartMinimum
+        End If
 
         HumidVal.Text = "0" & " %"
         TempVal.Text = "0" & " %"
@@ -119,7 +124,6 @@ Public Class Dashboard_Main
         voltLabel.Text = "-- --"
         '--------------------------End-------------------------------
     End Sub
-
 
     '----------------------------Buttons Hover & Clicked Features---------------------------------
     Sub setActiveBtn(sender As Object)
@@ -241,7 +245,7 @@ Public Class Dashboard_Main
                 If wateringDialog.DialogResult = DialogResult.OK Then
                     show_snackbar("Plant 1 watered recently", Succes_Type, TopRight_pos)
                 Else
-                    show_snackbar("Error Occured while watering Plant 1", Error_Type, TopRight_pos)
+                    show_snackbar("Watering Plant 1 failed", Error_Type, TopRight_pos)
                 End If
 
             ElseIf (sender Is plant2_btn AndAlso Not watering_Active) Then
@@ -261,7 +265,7 @@ Public Class Dashboard_Main
                 If wateringDialog.DialogResult = DialogResult.OK Then
                     show_snackbar("Plant 2 watered recently", Succes_Type, TopRight_pos)
                 Else
-                    show_snackbar("Error Occured while watering Plant 2", Error_Type, TopRight_pos)
+                    show_snackbar("Watering Plant 2 failed", Error_Type, TopRight_pos)
                 End If
 
             ElseIf (sender Is lights_btn And Not lights_Active) Then
@@ -341,6 +345,7 @@ Public Class Dashboard_Main
             send_Command(sender)
         End If
     End Sub
+    '----------------------------------End of Events----------------------------------------------
 
 
     Private Sub COMLISTENER_Tick(sender As Object, e As EventArgs) Handles COMLISTENER.Tick
@@ -364,29 +369,51 @@ Public Class Dashboard_Main
             If SERIALLISTENER.Enabled Then
                 SERIALLISTENER.Stop()
             End If
+
+            If wateringDialog IsNot Nothing AndAlso wateringDialog.Visible Then
+                wateringDialog.Close()
+            End If
+
+            If bootingDialog IsNot Nothing Then
+                bootingDialog.failed = True
+            End If
+
+            setBtn_To_Inactive(lights_btn)
+            setBtn_To_Inactive(pump_btn)
+
+            ResetDisplay(1, False)
         End If
     End Sub
 
     Private Sub SERIALLISTENER_Tick(sender As Object, e As EventArgs) Handles SERIALLISTENER.Tick
         If connected Then
             Try
-                Dim ReceivedData = serial_port.ReadExisting  '--> Read incoming serial data
-
                 Dim TB As New TextBox
                 TB.Multiline = True
-                TB.Text = ReceivedData   '--> Enter serial data into the textbox
+                TB.Text = Nothing
+
+                If serial_port.IsOpen Then
+                    Dim ReceivedData = serial_port.ReadExisting  '--> Read incoming serial data
+                    TB.Text = ReceivedData  '--> Enter serial data into the textbox
+                End If
 
                 If TB.Lines.Count > 0 Then
                     If Not Failures(TB.Lines(0).ToString) Then '---> If Not Failures Occured
 
-                        If TB.Lines.Count > 2 Then
-                            Displays_Gathered_Data(TB)
-                        ElseIf TB.Lines(0).Equals("Plant 1 Done :)") Then
+                        If TB.Lines(0).Equals("Booted successfully") Then
+                            bootingDialog.booted = True '--> Close the Booting Display
+                        ElseIf TB.Lines(0).Equals("Plant 1 Done!") Then
                             wateringDialog.done_sginal = True
-                        ElseIf TB.Lines(0).Equals("Plant 2 Done :)") Then
+                        ElseIf TB.Lines(0).Equals("Plant 2 Done!") Then
                             wateringDialog.done_sginal = True
                         ElseIf TB.Lines(0).Equals("Hi VB") Then
-                            serial_port.Write("?") '--> Reply to Arduino
+                            bootingDialog = New bootingDevice_Dialog
+                            bootingDialog.ShowDialog() '--< Open the Booting Display
+                            If serial_port.IsOpen Then
+                                serial_port.Write("?") '--> Reply to Arduino
+                            End If
+                        ElseIf TB.Lines.Length > 3 Then
+                            Displays_Gathered_Data(TB)
                         End If
 
                     End If

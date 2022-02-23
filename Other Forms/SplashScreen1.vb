@@ -1,30 +1,29 @@
 ﻿Imports System.Threading
 
 Public NotInheritable Class SplashScreen1
-    'TODO: This form can easily be set as the splash screen for the application by going to the "Application" tab
-    '  of the Project Designer ("Properties" under the "Project" menu).
 
-    Dim th1 As Thread = New Thread(New ThreadStart(AddressOf animation))
-    Sub New()
+    'Private DASHBOARD As Dashboard_Main
 
-        ' This call is required by the designer.
-        InitializeComponent()
-        FormBorderStyle = FormBorderStyle.None
-        Me.CheckForIllegalCrossThreadCalls = False
-        ' Add any initialization after the InitializeComponent() call.
+    Private Val As Integer = 0
+    Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
+        If Val >= 100 - 3 Then
+            Timer1.Stop()
+        Else
+            bar.Invoke(
+            Sub()
+                Val += 5
+                bar.Value = Val
+                barLabel.Text = Val.ToString & "%"
+            End Sub)
+        End If
 
-        Me.DoubleBuffered = True
-        th1.Start()
-    End Sub
 
-    Private Sub animation()
-        Label1.Text = "Starting | 25%"
-        Thread.Sleep(200)
-        Label1.Text = "Initialyzing | 50%"
-        Thread.Sleep(200)
-        Label1.Text = "Processing | 75%"
-        Thread.Sleep(200)
-        Label1.Text = "Launching... | 100%"
-        Refresh()
+        'If Val = 100 Then
+        '    DASHBOARD = New Dashboard_Main
+        '    DASHBOARD.Show()
+
+        '    Timer1.Stop()
+        '    Me.Dispose()
+        'End If
     End Sub
 End Class
