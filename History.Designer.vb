@@ -27,12 +27,12 @@ Partial Class History
         '
         'Label1
         '
-        Me.Label1.AutoSize = True
+        Me.Label1.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.Label1.BackColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(236, 163)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(698, 371)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(170, 39)
+        Me.Label1.Size = New System.Drawing.Size(76, 23)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "HISTORY"
         '
@@ -41,13 +41,12 @@ Partial Class History
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(237, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(245, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(800, 410)
+        Me.ClientSize = New System.Drawing.Size(800, 415)
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "History"
         Me.Text = "History"
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
