@@ -602,7 +602,7 @@ Partial Class Dashboard_Main
         Me.options_btn.ForeColor = System.Drawing.Color.White
         Me.options_btn.HoverState.FillColor = System.Drawing.Color.FromArgb(CType(CType(57, Byte), Integer), CType(CType(191, Byte), Integer), CType(CType(115, Byte), Integer))
         Me.options_btn.HoverState.Parent = Me.options_btn
-        Me.options_btn.Image = CType(resources.GetObject("options_btn.Image"), System.Drawing.Image)
+        Me.options_btn.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.info_48px_gray
         Me.options_btn.ImageOffset = New System.Drawing.Point(1, 0)
         Me.options_btn.ImageSize = New System.Drawing.Size(17, 17)
         Me.options_btn.Location = New System.Drawing.Point(5, 115)
@@ -613,7 +613,7 @@ Partial Class Dashboard_Main
         Me.options_btn.ShadowDecoration.Parent = Me.options_btn
         Me.options_btn.Size = New System.Drawing.Size(34, 34)
         Me.options_btn.TabIndex = 7
-        Me.BunifuToolTip1.SetToolTip(Me.options_btn, "View Options")
+        Me.BunifuToolTip1.SetToolTip(Me.options_btn, "View Info")
         Me.BunifuToolTip1.SetToolTipIcon(Me.options_btn, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.options_btn, "")
         '
@@ -679,7 +679,7 @@ Partial Class Dashboard_Main
         Me.BunifuPanel5.BackgroundImage = CType(resources.GetObject("BunifuPanel5.BackgroundImage"), System.Drawing.Image)
         Me.BunifuPanel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuPanel5.BorderColor = System.Drawing.Color.Transparent
-        Me.BunifuPanel5.BorderRadius = 14
+        Me.BunifuPanel5.BorderRadius = 16
         Me.BunifuPanel5.BorderThickness = 1
         Me.BunifuPanel5.Controls.Add(Me.pump_btn)
         Me.BunifuPanel5.Controls.Add(Me.lights_btn)
@@ -778,7 +778,7 @@ Partial Class Dashboard_Main
         Me.BunifuPanel4.BackgroundImage = CType(resources.GetObject("BunifuPanel4.BackgroundImage"), System.Drawing.Image)
         Me.BunifuPanel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuPanel4.BorderColor = System.Drawing.Color.Transparent
-        Me.BunifuPanel4.BorderRadius = 14
+        Me.BunifuPanel4.BorderRadius = 16
         Me.BunifuPanel4.BorderThickness = 1
         Me.BunifuPanel4.Controls.Add(Me.plant2_btn)
         Me.BunifuPanel4.Controls.Add(Me.plant1_btn)
@@ -875,7 +875,7 @@ Partial Class Dashboard_Main
         Me.BunifuPanel2.BackgroundImage = CType(resources.GetObject("BunifuPanel2.BackgroundImage"), System.Drawing.Image)
         Me.BunifuPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuPanel2.BorderColor = System.Drawing.Color.Transparent
-        Me.BunifuPanel2.BorderRadius = 14
+        Me.BunifuPanel2.BorderRadius = 16
         Me.BunifuPanel2.BorderThickness = 1
         Me.BunifuPanel2.Controls.Add(Me.battPanel)
         Me.BunifuPanel2.Controls.Add(Me.voltLabel)
@@ -1020,7 +1020,7 @@ Partial Class Dashboard_Main
         Me.BunifuPanel1.BackgroundImage = CType(resources.GetObject("BunifuPanel1.BackgroundImage"), System.Drawing.Image)
         Me.BunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BunifuPanel1.BorderColor = System.Drawing.Color.Transparent
-        Me.BunifuPanel1.BorderRadius = 14
+        Me.BunifuPanel1.BorderRadius = 16
         Me.BunifuPanel1.BorderThickness = 1
         Me.BunifuPanel1.Controls.Add(Me.Label2)
         Me.BunifuPanel1.Controls.Add(Me.sunLevel)

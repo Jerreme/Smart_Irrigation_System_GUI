@@ -22,12 +22,37 @@ Smart_Irrigation_System_GUI
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources._118772268_381010499561407_7835526776935370268_n">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.arduino_96px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.bar_chart_48px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.bar_chart_48px_gray">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.boco">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.gabriel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.gmail_24px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -43,6 +68,36 @@ Smart_Irrigation_System_GUI
 </summary>
 </member>
 <member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.humidity_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.IMG20220119144619">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.IMG20220122212850">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.info_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.info_48px_gray">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.jayvie_balili">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.jerreme_profile">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -68,6 +123,11 @@ Smart_Irrigation_System_GUI
 </summary>
 </member>
 <member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.plant_icon4">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.plant1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -133,6 +193,11 @@ Smart_Irrigation_System_GUI
 </summary>
 </member>
 <member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.temperature_48px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.visual_studio_2019_96px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

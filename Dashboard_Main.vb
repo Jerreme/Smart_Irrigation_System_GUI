@@ -155,9 +155,9 @@ Public Class Dashboard_Main
 
         If (active_btn IsNot options_btn) Then
             options_btn.FillColor = iddle_Col
-            options_btn.Image = My.Resources.ResourceManager.GetObject("settings_48px_gray")
+            options_btn.Image = My.Resources.ResourceManager.GetObject("info_48px_gray")
         Else
-            active_btn.Image = My.Resources.ResourceManager.GetObject("settings_48px")
+            active_btn.Image = My.Resources.ResourceManager.GetObject("info_48px")
         End If
 
         active_btn.FillColor = active_col
@@ -275,8 +275,6 @@ Public Class Dashboard_Main
                     write_Logs("Watering Plant 1 Failed", "REPORTS")
                 End If
 
-
-
             ElseIf (sender Is plant2_btn AndAlso Not watering_Active) Then
                 serial_port.Write("p") '--> send command to water plant2
                 watering_Active = True
@@ -386,19 +384,22 @@ Public Class Dashboard_Main
         If connected And Not errorOccured Then
             curr_sec = timeClass.Get_Seconds
 
-            If curr_sec Mod 10 = 0 And Not curr_sec = prev_sec Then
-                ' ˅ Write to DATA LOG ˅
-                Dim LOG As String =
-                    "[" & timeClass.Get_Time_Long & "]" &
-                    " Humidity: " & H_Res & "%" &
-                    " Temperature: " & T_Res & "°C" &
-                    " Sun Intensity: " & S_Res & "%" &
-                    " Battery: " & B_Res & "%" &
-                    " Voltage: " & V_Res & "V"
-                prev_sec = curr_sec
-                fileClass.WriteTo_DataFile(LOG)
-                historyForm.Update_DataBox("DATA", LOG)
+            If H_Res IsNot Nothing AndAlso Not H_Res.Equals("") Then
+                If curr_sec Mod 10 = 0 And Not curr_sec = prev_sec Then
+                    ' ˅ Write to DATA LOG ˅
+                    Dim LOG As String =
+                        "[" & timeClass.Get_Time_Long & "]" &
+                        " Humidity: " & H_Res & "% |" &
+                        " Temperature: " & T_Res & "°C |" &
+                        " Sun Intensity: " & S_Res & "% |" &
+                        " Battery: " & B_Res & "% |" &
+                        " Voltage: " & V_Res & "V"
 
+                    prev_sec = curr_sec
+                    fileClass.WriteTo_DataFile(LOG)
+                    historyForm.Update_DataBox("DATA", LOG)
+
+                End If
             End If
         End If
     End Sub

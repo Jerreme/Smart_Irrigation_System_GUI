@@ -107,20 +107,4 @@
         reportLog.ScrollToCaret()
         reportLog.Refresh()
     End Sub
-
-
-    'Public Sub Update_DataBox(data As String)
-    '    If dataLog.Lines.Length >= 100 Then
-    '        Dim t As String = ""
-    '        Dim allLines As String() = fileClass.ReadData()
-
-    '        For i As Integer = allLines.Length - 100 To allLines.Length - 2 Step 1
-    '            t += allLines(i).ToString & vbNewLine
-    '        Next
-    '        dataLog.Text = t
-    '    End If
-
-    '    dataLog.AppendText(data & vbNewLine)
-    'End Sub
-
 End Class

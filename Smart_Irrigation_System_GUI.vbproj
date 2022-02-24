@@ -303,6 +303,19 @@
     <None Include="Icons\refresh_20px_c.png" />
     <None Include="Icons\refresh_20px.png" />
     <None Include="Images\plant2.png" />
+    <None Include="Images\IMG20220122212850.jpg" />
+    <None Include="Images\IMG20220119144619.jpg" />
+    <None Include="Icons\info_48px.png" />
+    <None Include="Icons\info_48px_gray.png" />
+    <None Include="Images\jayvie balili.jpg" />
+    <None Include="Images\boco.jpg" />
+    <None Include="Images\118772268_381010499561407_7835526776935370268_n.jpg" />
+    <None Include="Images\gabriel.jpg" />
+    <None Include="Images\jerreme profile.jpg" />
+    <None Include="Icons\visual_studio_2019_96px.png" />
+    <None Include="Icons\arduino_96px.png" />
+    <None Include="Images\plant1.png" />
+    <None Include="Icons\gmail_24px.png" />
     <Content Include="Logo.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
