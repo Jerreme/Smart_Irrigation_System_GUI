@@ -1,19 +1,19 @@
-﻿Imports System.Threading
-
+﻿
 Public NotInheritable Class SplashScreen1
 
     'Private DASHBOARD As Dashboard_Main
-
     Private Val As Integer = 0
+
     Private Sub Timer1_Tick(sender As Object, e As EventArgs) Handles Timer1.Tick
-        If Val >= 100 - 3 Then
+        If Val >= 100 Then
             Timer1.Stop()
         Else
-            bar.Invoke(
+            Me.Invoke(
             Sub()
-                Val += 5
+                Val += 20
                 bar.Value = Val
                 barLabel.Text = Val.ToString & "%"
+                bar.Invalidate()
             End Sub)
         End If
 

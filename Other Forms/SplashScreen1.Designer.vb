@@ -82,7 +82,7 @@ Partial Class SplashScreen1
         Me.BunifuPictureBox1.BorderRadius = 30
         Me.BunifuPictureBox1.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.Logo
         Me.BunifuPictureBox1.IsCircle = True
-        Me.BunifuPictureBox1.Location = New System.Drawing.Point(136, 43)
+        Me.BunifuPictureBox1.Location = New System.Drawing.Point(136, 52)
         Me.BunifuPictureBox1.Name = "BunifuPictureBox1"
         Me.BunifuPictureBox1.Size = New System.Drawing.Size(60, 60)
         Me.BunifuPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -95,12 +95,11 @@ Partial Class SplashScreen1
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(46, 106)
+        Me.Label2.Location = New System.Drawing.Point(46, 121)
         Me.Label2.Name = "Label2"
-        Me.Label2.Padding = New System.Windows.Forms.Padding(10, 0, 0, 0)
         Me.Label2.Size = New System.Drawing.Size(241, 30)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "SMART IRRIGATION SYSTEM"
+        Me.Label2.Text = "PLANTITO APP"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'SplashScreen1
@@ -116,6 +115,7 @@ Partial Class SplashScreen1
         Me.Controls.Add(Me.barLabel)
         Me.DoubleBuffered = True
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SplashScreen1"
