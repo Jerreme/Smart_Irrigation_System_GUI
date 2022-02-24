@@ -1,10 +1,6 @@
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Smart_Irrigation_System_GUI.exe
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Smart_Irrigation_System_GUI.pdb
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Smart_Irrigation_System_GUI.xml
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.1.5.3.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuImageButton.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPanel.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Guna.UI2.dll
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.Resources.resources
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.vbproj.GenerateResource.cache
@@ -18,14 +14,8 @@ C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.Dashboard_Main.resources
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.History.resources
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.Options.resources
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuShadowPanel.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuSnackbar.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuGradientPanel.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.watering_Dialog.resources
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.bootingDevice_Dialog.resources
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Bunifu.UI.WinForms.BunifuTextbox.dll
-C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.vbproj.AssemblyReference.cache
 C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.SplashScreen2.resources
+C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\bin\Debug\Smart_Irrigation_System_GUI.exe.config
+C:\Users\jiide\Documents\Visual Studio 2019\Projects\Smart_Irrigation_System_GUI\obj\Debug\Smart_Irrigation_System_GUI.vbproj.AssemblyReference.cache

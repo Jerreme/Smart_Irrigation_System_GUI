@@ -48,3 +48,11 @@
 [02/24/22] [1:27:58 PM]: Device Disconnected
 [02/24/22] [1:28:05 PM]: Device Disconnected
 [02/24/22] [1:28:26 PM]: Device Disconnected
+[02/24/22] [1:38:54 PM]: Device Disconnected
+[02/24/22] [1:39:22 PM]: Device Disconnected
+[02/24/22] [2:48:37 PM]: Device Disconnected
+[02/24/22] [2:49:00 PM]: Device is not yet powered
+[02/24/22] [2:49:10 PM]: Device is not yet powered
+[02/24/22] [2:49:10 PM]: Device Disconnected
+[02/24/22] [2:50:04 PM]: Device Disconnected
+[02/24/22] [2:50:16 PM]: Device Disconnected
