@@ -83,10 +83,10 @@ Partial Class bootingDevice_Dialog
         Me.BunifuCircleProgress1.SuperScriptMargin = New System.Windows.Forms.Padding(5, 20, 0, 0)
         Me.BunifuCircleProgress1.SuperScriptText = ""
         Me.BunifuCircleProgress1.TabIndex = 16
-        Me.BunifuCircleProgress1.Text = "55"
+        Me.BunifuCircleProgress1.Text = "30"
         Me.BunifuCircleProgress1.TextMargin = New System.Windows.Forms.Padding(0)
-        Me.BunifuCircleProgress1.Value = 55
-        Me.BunifuCircleProgress1.ValueByTransition = 55
+        Me.BunifuCircleProgress1.Value = 30
+        Me.BunifuCircleProgress1.ValueByTransition = 30
         Me.BunifuCircleProgress1.ValueMargin = New System.Windows.Forms.Padding(0)
         '
         'drag

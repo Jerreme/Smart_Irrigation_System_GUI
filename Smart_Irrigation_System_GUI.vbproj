@@ -178,12 +178,6 @@
     <Compile Include="Other Forms\bootingDevice_Dialog.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Other Forms\SplashScreen2.Designer.vb">
-      <DependentUpon>SplashScreen2.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Other Forms\SplashScreen2.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Other Forms\watering_Dialog.Designer.vb">
       <DependentUpon>watering_Dialog.vb</DependentUpon>
     </Compile>
@@ -219,9 +213,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Other Forms\SplashScreen1.resx">
       <DependentUpon>SplashScreen1.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Other Forms\SplashScreen2.resx">
-      <DependentUpon>SplashScreen2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Other Forms\watering_Dialog.resx">
       <DependentUpon>watering_Dialog.vb</DependentUpon>
