@@ -1,67 +1,8 @@
-﻿[02/24/22] [1:22:25 AM]: Device Connected
-[02/24/22] [1:26:01 AM]: Device Connected
-[02/24/22] [1:28:22 AM]: Device Connected
-[02/24/22] [1:28:58 AM]: Device Connected
-[02/24/22] [1:32:51 AM]: Device Connected
-[02/24/22] [1:34:36 AM]: Device Connected
-[02/24/22] [1:35:54 AM]: Device Connected
-[02/24/22] [10:14:30 AM]: Device Connected
-[02/24/22] [10:15:43 AM]: Lights Set to On
-[02/24/22] [10:15:45 AM]: Lights Set to On
-[02/24/22] [10:15:48 AM]: Pump Set to On
-[02/24/22] [10:21:03 AM]: Device Connected
-[02/24/22] [10:22:18 AM]: Device Connected
-[02/24/22] [10:24:29 AM]: Device Connected
-[02/24/22] [10:25:19 AM]: Device Connected
-[02/24/22] [10:34:57 AM]: Device Connected
-[02/24/22] [10:38:14 AM]: Device Connected
-[02/24/22] [10:43:08 AM]: Device Connected
-[02/24/22] [10:44:32 AM]: Device Connected
-[02/24/22] [10:46:01 AM]: Device Connected
-[02/24/22] [10:47:41 AM]: Device Connected
-[02/24/22] [10:48:39 AM]: Device Connected
-[02/24/22] [10:49:03 AM]: Lights Set to On
-[02/24/22] [11:32:51 AM]: Device Connected
-[02/24/22] [11:33:11 AM]: Lights Set to On
-[02/24/22] [11:33:14 AM]: Lights Set to On
-[02/24/22] [11:33:26 AM]: Pump Set to On
-[02/24/22] [11:37:41 AM]: Device Connected
-[02/24/22] [11:37:53 AM]: Device Connected
-[02/24/22] [11:38:24 AM]: Lights Set to On
-[02/24/22] [11:38:27 AM]: Lights Set to On
-[02/24/22] [11:40:38 AM]: Device Connected
-[02/24/22] [11:41:09 AM]: Device Connected
-[02/24/22] [11:41:52 AM]: Device Connected
-[02/24/22] [11:42:00 AM]: Device Connected
-[02/24/22] [11:42:26 AM]: Device Connected
-[02/24/22] [11:42:48 AM]: Device Connected
-[02/24/22] [11:45:27 AM]: Device Connected
-[02/24/22] [11:49:04 AM]: Device Connected
-[02/24/22] [11:49:35 AM]: Device Connected
-[02/24/22] [11:49:53 AM]: Device Connected
-[02/24/22] [11:50:45 AM]: Device Connected
-[02/24/22] [11:51:07 AM]: Device Connected
-[02/24/22] [11:51:51 AM]: Device Connected
-[02/24/22] [12:25:16 PM]: Device Connected
-[02/24/22] [12:28:51 PM]: Device Connected
-[02/24/22] [12:31:58 PM]: Device Connected
-[02/24/22] [12:32:59 PM]: Device Connected
-[02/24/22] [12:34:56 PM]: Device Connected
-[02/24/22] [12:37:50 PM]: Device Connected
-[02/24/22] [12:39:34 PM]: Device Connected
-[02/24/22] [12:40:18 PM]: Device Connected
-[02/24/22] [12:41:20 PM]: Device Connected
-[02/24/22] [12:46:49 PM]: Device Connected
-[02/24/22] [2:48:58 PM]: Device Connected
-[02/24/22] [2:49:16 PM]: Device Connected
-[02/24/22] [2:49:34 PM]: Watered Plant 2
-[02/24/22] [2:49:34 PM]: Lights Set to On
-[02/24/22] [2:49:36 PM]: Lights Set to On
-[02/24/22] [2:49:48 PM]: Lights Set to On
-[02/24/22] [2:49:51 PM]: Lights Set to On
-[02/24/22] [2:50:00 PM]: Pump Set to On
-[02/24/22] [2:50:07 PM]: Device Connected
-[02/24/22] [2:50:28 PM]: Device Connected
-[02/24/22] [2:50:36 PM]: Lights Set to On
-[02/24/22] [2:50:38 PM]: Pump Set to On
-[02/24/22] [2:50:53 PM]: Watered Plant 1
+﻿[02/24/22] [5:40:25 PM]: Device Connected
+[02/24/22] [5:40:57 PM]: Lights Set to On
+[02/24/22] [5:41:02 PM]: Lights Set to On
+[02/24/22] [5:41:06 PM]: Pump Set to On
+[02/24/22] [5:41:24 PM]: Watered Plant 2
+[02/24/22] [5:41:50 PM]: Watered Plant 1
+[02/24/22] [5:43:09 PM]: Device Connected
+[02/24/22] [5:44:44 PM]: Device Connected
