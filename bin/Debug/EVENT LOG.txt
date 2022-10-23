@@ -109,3 +109,17 @@
 [10/23/22] [1:20:42 PM]: Watered Plant 2
 [10/23/22] [1:20:55 PM]: Watered Plant 1
 [10/23/22] [1:21:06 PM]: Watered Plant 2
+[10/23/22] [4:18:05 pm]: Device Connected
+[10/23/22] [4:20:05 pm]: Device Connected
+[10/23/22] [4:21:16 pm]: Watered Plant 1
+[10/23/22] [4:21:34 pm]: Watered Plant 2
+[10/23/22] [4:21:37 pm]: Lights Set to On
+[10/23/22] [4:21:40 pm]: Lights Set to On
+[10/23/22] [4:21:42 pm]: Lights Set to On
+[10/23/22] [4:21:58 pm]: Pump Set to On
+[10/23/22] [4:22:34 pm]: Watered Plant 1
+[10/23/22] [4:24:09 pm]: Device Connected
+[10/23/22] [4:24:41 pm]: Device Connected
+[10/23/22] [4:24:59 pm]: Device Connected
+[10/23/22] [4:25:37 pm]: Watered Plant 2
+[10/23/22] [4:25:48 pm]: Device Connected

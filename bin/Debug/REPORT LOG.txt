@@ -33,3 +33,13 @@
 [10/23/22] [10:03:12 AM]: Device Disconnected
 [10/23/22] [10:03:23 AM]: Device Disconnected
 [10/23/22] [10:03:26 AM]: Device Failed to Boot
+[10/23/22] [4:23:59 pm]: Device Disconnected
+[10/23/22] [4:23:59 pm]: Watering Plant 1 Failed
+[10/23/22] [4:24:25 pm]: Device Disconnected
+[10/23/22] [4:24:25 pm]: Watering Plant 1 Failed
+[10/23/22] [4:24:41 pm]: Device Disconnected
+[10/23/22] [4:25:46 pm]: Device Disconnected
+[10/23/22] [4:25:46 pm]: Watering Plant 1 Failed
+[10/24/22] [6:46:55 am]: Device Disconnected
+[10/24/22] [6:50:44 am]: Device Disconnected
+[10/24/22] [6:51:49 am]: Device Disconnected

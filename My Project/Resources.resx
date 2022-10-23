@@ -121,9 +121,6 @@
   <data name="humidity_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\humidity_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gabriel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\gabriel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="visual_studio_2019_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\visual_studio_2019_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -168,6 +165,12 @@
   </data>
   <data name="info_48px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\info_48px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gmail_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\gmail_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="plant_icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\plant_icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="settings_48px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\settings_48px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,8 +217,8 @@
   <data name="settings_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\settings_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="plant_icon4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Images\plant_icon4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="gabriel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\gabriel.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plant1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\plant1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,7 +229,7 @@
   <data name="jerreme profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\jerreme profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gmail_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\gmail_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="person3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\person3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
