@@ -515,7 +515,7 @@ Public Class Dashboard_Main
                     type As Bunifu.UI.WinForms.BunifuSnackbar.MessageTypes,
                     pos As Bunifu.UI.WinForms.BunifuSnackbar.Positions)
 
-        snackbar1.Show(Me, text, type, 2000, "", pos)
+        '\*snackbar1.Show(Me, text, type, 2000, "", pos)*\'
     End Sub
 
 
