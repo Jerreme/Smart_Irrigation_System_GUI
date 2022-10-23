@@ -169,8 +169,14 @@
   <data name="info_48px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\info_48px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="gmail_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Icons\gmail_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="settings_48px_gray" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Icons\settings_48px_gray.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="john_dom" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\john_dom.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="plant_icon14" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\plant_icon14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,7 +232,7 @@
   <data name="jerreme profile" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Images\jerreme profile.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="gmail_24px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Icons\gmail_24px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="306814323_826124411736709_2367912319922863030_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Images\306814323_826124411736709_2367912319922863030_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

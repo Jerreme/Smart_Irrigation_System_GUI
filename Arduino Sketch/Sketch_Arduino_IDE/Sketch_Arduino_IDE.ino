@@ -62,7 +62,7 @@ void VB_CONNECTED() {
    Reboot the Devie to set back to it's Standalone Values.*/
 
 void setup() {
-  
+
   /* Pins Configuration */
   pinMode(servo_pin, OUTPUT);
   pinMode(relayPump_pin, OUTPUT);
@@ -78,7 +78,7 @@ void setup() {
   pinMode(volt_pin, INPUT);
   pinMode(dht_pin, INPUT);
   pinMode(buzzer_pin, OUTPUT);
-  
+
 
   /* This allows us to communicate to VB GUI using Serial Communication
      Baud rate is must be 9600 */
@@ -94,17 +94,16 @@ void setup() {
 
 
   Serial.println("Hi VB");
-  F.START();        // Boot for 3 Seconds then beep
+  F.START();  // Boot for 3 Seconds then beep
   Serial.println("Booted successfully");
-  Serial.flush();   // Waits for the transmission of outgoing serial data to complete.
-  delay(100);       // Stabilize transmission of data
+  Serial.flush();  // Waits for the transmission of outgoing serial data to complete.
+  delay(100);      // Stabilize transmission of data
 
   if (Serial.available()) {
     if (char(Serial.read()) == '?') {
       VB_CONNECTED();
     }
   }
-
 }
 
 void loop() {
@@ -147,7 +146,7 @@ void loop() {
   }
 
   // -Read Sensors And or Gather Information-
-  
+
   volt = S.readVoltage(volt_pin);
   sun = S.readSun(ldr_pin);
   temp = S.readTemp(dht_pin);
@@ -156,7 +155,7 @@ void loop() {
 
   if (volt > 4.2) {
     volt = 4.2;
-  }else if (volt < 3.0) {
+  } else if (volt < 3.0) {
     volt = 3.0;
   }
 
@@ -193,12 +192,13 @@ void loop() {
 
   // -Auto Water the plant-
   if (S.readMoisture(moist1_pin)) {  // True if the soil is Dry
-    if (S.readIR(ir1_pin)) {         // True if pot is present
-      // F.pumpWater("Plant 1");
+    if (!S.readIR(ir1_pin)) {        // True if pot is present
+      F.pumpWater("Plant 1");
     }
-  } else if (S.readMoisture(moist2_pin)) {  // True if the soil is Dry
-    if (S.readIR(ir2_pin)) {                // True if pot is present
-      // F.pumpWater("Plant 2");
+  }
+  if (S.readMoisture(moist2_pin)) {  // True if the soil is Dry
+    if (!S.readIR(ir2_pin)) {        // True if pot is present
+      F.pumpWater("Plant 2");
     }
   }
 

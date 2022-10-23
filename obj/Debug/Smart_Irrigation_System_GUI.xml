@@ -27,6 +27,11 @@ Smart_Irrigation_System_GUI
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources._306814323_826124411736709_2367912319922863030_n">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.arduino_96px">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -98,6 +103,11 @@ Smart_Irrigation_System_GUI
 </summary>
 </member>
 <member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.jerreme_profile">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:Smart_Irrigation_System_GUI.My.Resources.Resources.john_dom">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

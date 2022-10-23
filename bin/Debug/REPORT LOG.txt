@@ -33,3 +33,6 @@
 [10/23/22] [10:03:12 AM]: Device Disconnected
 [10/23/22] [10:03:23 AM]: Device Disconnected
 [10/23/22] [10:03:26 AM]: Device Failed to Boot
+[10/24/22] [5:15:12 AM]: Device Disconnected
+[10/24/22] [5:25:08 AM]: Device Disconnected
+[10/24/22] [6:01:12 AM]: Device is not yet powered

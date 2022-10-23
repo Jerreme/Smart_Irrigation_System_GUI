@@ -35,6 +35,7 @@ Partial Class Options
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.BunifuPictureBox6 = New Bunifu.UI.WinForms.BunifuPictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.BunifuPictureBox3 = New Bunifu.UI.WinForms.BunifuPictureBox()
         Me.BunifuPictureBox4 = New Bunifu.UI.WinForms.BunifuPictureBox()
@@ -51,6 +52,7 @@ Partial Class Options
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.BunifuPictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuPictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuPictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -212,7 +214,7 @@ Partial Class Options
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(50, 15)
         Me.Label7.TabIndex = 17
-        Me.Label7.Text = "1.0"
+        Me.Label7.Text = "1.1.0"
         Me.BunifuToolTip1.SetToolTip(Me.Label7, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label7, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Label7, "")
@@ -250,6 +252,7 @@ Partial Class Options
         '
         Me.Panel1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.White
+        Me.Panel1.Controls.Add(Me.BunifuPictureBox6)
         Me.Panel1.Controls.Add(Me.Label4)
         Me.Panel1.Controls.Add(Me.BunifuPictureBox3)
         Me.Panel1.Controls.Add(Me.BunifuPictureBox4)
@@ -264,6 +267,26 @@ Partial Class Options
         Me.BunifuToolTip1.SetToolTip(Me.Panel1, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.Panel1, Nothing)
         Me.BunifuToolTip1.SetToolTipTitle(Me.Panel1, "")
+        '
+        'BunifuPictureBox6
+        '
+        Me.BunifuPictureBox6.AllowFocused = False
+        Me.BunifuPictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.BunifuPictureBox6.AutoSizeHeight = True
+        Me.BunifuPictureBox6.BorderRadius = 27
+        Me.BunifuPictureBox6.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.john_dom
+        Me.BunifuPictureBox6.IsCircle = True
+        Me.BunifuPictureBox6.Location = New System.Drawing.Point(54, 121)
+        Me.BunifuPictureBox6.Margin = New System.Windows.Forms.Padding(10)
+        Me.BunifuPictureBox6.Name = "BunifuPictureBox6"
+        Me.BunifuPictureBox6.Size = New System.Drawing.Size(55, 55)
+        Me.BunifuPictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.BunifuPictureBox6.TabIndex = 25
+        Me.BunifuPictureBox6.TabStop = False
+        Me.BunifuToolTip1.SetToolTip(Me.BunifuPictureBox6, "jerremedetorres029@gmail.com")
+        Me.BunifuToolTip1.SetToolTipIcon(Me.BunifuPictureBox6, Global.Smart_Irrigation_System_GUI.My.Resources.Resources.gmail_24px)
+        Me.BunifuToolTip1.SetToolTipTitle(Me.BunifuPictureBox6, "")
+        Me.BunifuPictureBox6.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle
         '
         'Label4
         '
@@ -288,7 +311,7 @@ Partial Class Options
         Me.BunifuPictureBox3.BorderRadius = 27
         Me.BunifuPictureBox3.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.jerreme_profile
         Me.BunifuPictureBox3.IsCircle = True
-        Me.BunifuPictureBox3.Location = New System.Drawing.Point(204, 121)
+        Me.BunifuPictureBox3.Location = New System.Drawing.Point(54, 46)
         Me.BunifuPictureBox3.Margin = New System.Windows.Forms.Padding(10)
         Me.BunifuPictureBox3.Name = "BunifuPictureBox3"
         Me.BunifuPictureBox3.Size = New System.Drawing.Size(55, 55)
@@ -308,7 +331,7 @@ Partial Class Options
         Me.BunifuPictureBox4.BorderRadius = 27
         Me.BunifuPictureBox4.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.boco
         Me.BunifuPictureBox4.IsCircle = True
-        Me.BunifuPictureBox4.Location = New System.Drawing.Point(169, 46)
+        Me.BunifuPictureBox4.Location = New System.Drawing.Point(204, 46)
         Me.BunifuPictureBox4.Margin = New System.Windows.Forms.Padding(10)
         Me.BunifuPictureBox4.Name = "BunifuPictureBox4"
         Me.BunifuPictureBox4.Size = New System.Drawing.Size(55, 55)
@@ -348,7 +371,7 @@ Partial Class Options
         Me.BunifuPictureBox1.BorderRadius = 27
         Me.BunifuPictureBox1.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.jayvie_balili
         Me.BunifuPictureBox1.IsCircle = True
-        Me.BunifuPictureBox1.Location = New System.Drawing.Point(94, 46)
+        Me.BunifuPictureBox1.Location = New System.Drawing.Point(204, 121)
         Me.BunifuPictureBox1.Margin = New System.Windows.Forms.Padding(10)
         Me.BunifuPictureBox1.Name = "BunifuPictureBox1"
         Me.BunifuPictureBox1.Size = New System.Drawing.Size(55, 55)
@@ -368,7 +391,7 @@ Partial Class Options
         Me.BunifuPictureBox5.BorderRadius = 27
         Me.BunifuPictureBox5.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources._118772268_381010499561407_7835526776935370268_n
         Me.BunifuPictureBox5.IsCircle = True
-        Me.BunifuPictureBox5.Location = New System.Drawing.Point(54, 121)
+        Me.BunifuPictureBox5.Location = New System.Drawing.Point(129, 46)
         Me.BunifuPictureBox5.Margin = New System.Windows.Forms.Padding(10)
         Me.BunifuPictureBox5.Name = "BunifuPictureBox5"
         Me.BunifuPictureBox5.Size = New System.Drawing.Size(55, 55)
@@ -400,9 +423,9 @@ Partial Class Options
         Me.Label3.BackColor = System.Drawing.Color.White
         Me.Label3.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(358, 199)
+        Me.Label3.Location = New System.Drawing.Point(358, 187)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(299, 147)
+        Me.Label3.Size = New System.Drawing.Size(299, 158)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = resources.GetString("Label3.Text")
         Me.BunifuToolTip1.SetToolTip(Me.Label3, "")
@@ -415,7 +438,7 @@ Partial Class Options
         Me.Label2.BackColor = System.Drawing.Color.White
         Me.Label2.Font = New System.Drawing.Font("Segoe UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(542, 52)
+        Me.Label2.Location = New System.Drawing.Point(544, 40)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(96, 17)
         Me.Label2.TabIndex = 5
@@ -428,8 +451,8 @@ Partial Class Options
         '
         Me.Guna2PictureBox2.BackColor = System.Drawing.Color.White
         Me.Guna2PictureBox2.BorderRadius = 12
-        Me.Guna2PictureBox2.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.IMG20220122212850
-        Me.Guna2PictureBox2.Location = New System.Drawing.Point(361, 28)
+        Me.Guna2PictureBox2.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.IMG20220119144619
+        Me.Guna2PictureBox2.Location = New System.Drawing.Point(361, 26)
         Me.Guna2PictureBox2.Name = "Guna2PictureBox2"
         Me.Guna2PictureBox2.ShadowDecoration.Parent = Me.Guna2PictureBox2
         Me.Guna2PictureBox2.Size = New System.Drawing.Size(160, 120)
@@ -444,11 +467,11 @@ Partial Class Options
         '
         Me.Guna2PictureBox1.BackColor = System.Drawing.Color.White
         Me.Guna2PictureBox1.BorderRadius = 12
-        Me.Guna2PictureBox1.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources.IMG20220119144619
-        Me.Guna2PictureBox1.Location = New System.Drawing.Point(527, 81)
+        Me.Guna2PictureBox1.Image = Global.Smart_Irrigation_System_GUI.My.Resources.Resources._306814323_826124411736709_2367912319922863030_n
+        Me.Guna2PictureBox1.Location = New System.Drawing.Point(538, 78)
         Me.Guna2PictureBox1.Name = "Guna2PictureBox1"
         Me.Guna2PictureBox1.ShadowDecoration.Parent = Me.Guna2PictureBox1
-        Me.Guna2PictureBox1.Size = New System.Drawing.Size(130, 100)
+        Me.Guna2PictureBox1.Size = New System.Drawing.Size(119, 90)
         Me.Guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Guna2PictureBox1.TabIndex = 3
         Me.Guna2PictureBox1.TabStop = False
@@ -483,6 +506,7 @@ Partial Class Options
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.BunifuPictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BunifuPictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BunifuPictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.BunifuPictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
@@ -518,4 +542,5 @@ Partial Class Options
     Friend WithEvents Label9 As Label
     Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents BunifuToolTip1 As Bunifu.UI.WinForms.BunifuToolTip
+    Friend WithEvents BunifuPictureBox6 As Bunifu.UI.WinForms.BunifuPictureBox
 End Class

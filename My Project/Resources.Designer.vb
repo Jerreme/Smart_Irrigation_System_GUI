@@ -73,6 +73,16 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized resource of type System.Drawing.Bitmap.
         '''</summary>
+        Friend ReadOnly Property _306814323_826124411736709_2367912319922863030_n() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("306814323_826124411736709_2367912319922863030_n", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
         Friend ReadOnly Property arduino_96px() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("arduino_96px", resourceCulture)
@@ -216,6 +226,16 @@ Namespace My.Resources
         Friend ReadOnly Property jerreme_profile() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("jerreme profile", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  Looks up a localized resource of type System.Drawing.Bitmap.
+        '''</summary>
+        Friend ReadOnly Property john_dom() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("john_dom", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property
