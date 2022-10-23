@@ -970,9 +970,9 @@ Partial Class Dashboard_Main
         Me.Label4.Location = New System.Drawing.Point(181, 31)
         Me.Label4.Margin = New System.Windows.Forms.Padding(0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(168, 20)
+        Me.Label4.Size = New System.Drawing.Size(231, 20)
         Me.Label4.TabIndex = 2
-        Me.Label4.Text = "SMART IRRIGATION SYSTEM"
+        Me.Label4.Text = "SMART PLANT WATERING SYSTEM"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.BunifuToolTip1.SetToolTip(Me.Label4, "")
         Me.BunifuToolTip1.SetToolTipIcon(Me.Label4, Nothing)

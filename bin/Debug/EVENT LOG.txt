@@ -101,3 +101,11 @@
 [10/23/22] [9:57:05 AM]: Device Connected
 [10/23/22] [10:03:18 AM]: Device Connected
 [10/23/22] [10:03:40 AM]: Device Connected
+[10/23/22] [1:06:20 PM]: Device Connected
+[10/23/22] [1:18:59 PM]: Device Connected
+[10/23/22] [1:20:17 PM]: Device Connected
+[10/23/22] [1:20:25 PM]: Lights Set to On
+[10/23/22] [1:20:29 PM]: Pump Set to On
+[10/23/22] [1:20:42 PM]: Watered Plant 2
+[10/23/22] [1:20:55 PM]: Watered Plant 1
+[10/23/22] [1:21:06 PM]: Watered Plant 2
