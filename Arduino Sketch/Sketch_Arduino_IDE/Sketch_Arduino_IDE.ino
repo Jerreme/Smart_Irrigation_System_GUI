@@ -1,5 +1,5 @@
 /* Seed Growing Device Project
-   - an smart irrigation system that grows seed and/or small plants.
+   - an smart plant watering system that grows seed and/or small plants.
 
    Group Members:
     Jerreme De Torres
@@ -7,7 +7,9 @@
     Nathaniel Valenzuela
     John Lloyd Gabriel
     Leo Marc Boco
+    John Dominick Lariosa
 */
+
 
 #include <Arduino.h>
 #include <Sensors.h>
@@ -29,13 +31,12 @@
 #define dht_pin A2
 #define buzzer_pin A3
 
-//Classes
-// -Object for our Sensor Library-
+
+/* Object for our Sensor Library */
 Sensors S;
-// -Object for our Function Library-
+/* Object for our Function Library */
 Functions F = Functions(servo_pin, buzzer_pin, relayPump_pin, relayLED_pin);
 
-//Variabes
 int count = 0;
 int battery = 0;
 
@@ -47,26 +48,22 @@ double volt;
 bool analytic = false;
 bool trig = false;
 
-// The Over all Data
+/* Over all Data */
 String OVERALL_DATA = "";
 int time_delay = 200;
-double treshold = 0.00;
 
-//------------Triggered when VB GUI is Connected---------------//
+/* Triggered when VB GUI is Connected */
 void VB_CONNECTED() {
-  time_delay = 1000;  //---> set to 1sec loop delay, to be synchrounous with VB GUI
-  // treshold = 0.40;  //---> Voltage reading Adjustment
+  time_delay = 1000;  // set to 1sec loop delay, to be synchrounous with VB GUI
 }
-// (Voltage reading is quite defferent WHen arduino board is powered view USB)
 
+/* PS: Voltage reading is quite defferent WHen arduino board is powered view USB */
 /* NOTE: If VB GUI is not present and/or Arduino Board is powered via battery.
-    Reboot the Devie to set back to it's Standalone Values.
-*/
-//-------------------------------------------------------------//
+   Reboot the Devie to set back to it's Standalone Values.*/
 
 void setup() {
-
-  // -Define pinouts-
+  
+  /* Pins Configuration */
   pinMode(servo_pin, OUTPUT);
   pinMode(relayPump_pin, OUTPUT);
   pinMode(relayLED_pin, OUTPUT);
@@ -81,37 +78,37 @@ void setup() {
   pinMode(volt_pin, INPUT);
   pinMode(dht_pin, INPUT);
   pinMode(buzzer_pin, OUTPUT);
+  
 
-  Serial.begin(9600); //---> This allows us to communicate to the Serial to VB GUI
-  //Baud rate is always 9600 don't modify
+  /* This allows us to communicate to VB GUI using Serial Communication
+     Baud rate is must be 9600 */
+  Serial.begin(9600);
 
-  //-------------------------Trap Sketch if Device is not yet powered------------------------
+  /* Trap Sketch if Device is not yet powered */
   while (S.readVoltage(volt_pin) < 1) {
-    Serial.println("Device is not yet powered! [Delegate]");  //--> Continue Alerting VB GUI
-    delay(10000); //---> wait 10 seconds to warn the VB again
+    Serial.println("Device is not yet powered! [Delegate]");  // Continue Alerting VB GUI
+    delay(10000);                                             // wait 10 seconds to warn the VB again
   }
   /* [1] The Only solution is to Turn on the Battery FIRST to powered the device
-     [2] Then Connect the Arduino Board via Arduino Cable to the USB Port of the Computer
-  */
-  //------------------------------------------------------------------------------------------
+     [2] Then Connect the Arduino Board via Arduino Cable to the USB Port of the Computer */
 
 
   Serial.println("Hi VB");
-  // Boot for 3 Seconds then beep
-  F.START();
+  F.START();        // Boot for 3 Seconds then beep
   Serial.println("Booted successfully");
-  Serial.flush();     //---> Waits for the transmission of outgoing serial data to complete.
-  delay(100);         //---> Stabilize transmission of data
+  Serial.flush();   // Waits for the transmission of outgoing serial data to complete.
+  delay(100);       // Stabilize transmission of data
 
   if (Serial.available()) {
     if (char(Serial.read()) == '?') {
       VB_CONNECTED();
     }
   }
+
 }
 
 void loop() {
-  OVERALL_DATA = ""; // --> Reset OVERALL_DATA
+  OVERALL_DATA = "";  // --> Reset OVERALL_DATA
 
   if (Serial.available()) {
     char c = Serial.read();
@@ -147,28 +144,32 @@ void loop() {
       default:
         break;
     }
-
   }
 
   // -Read Sensors And or Gather Information-
+  
+  volt = S.readVoltage(volt_pin);
   sun = S.readSun(ldr_pin);
   temp = S.readTemp(dht_pin);
   humid = S.readHumidity(dht_pin);
-  volt = S.readVoltage(volt_pin);
   battery = F.getBattPercentage();
 
-  volt -= treshold;
+  if (volt > 4.2) {
+    volt = 4.2;
+  }else if (volt < 3.0) {
+    volt = 3.0;
+  }
 
-  // -Display Data-
+  // ------------Display Data------------------
   if (!analytic) {
-    //Readable Display
+    //Word Display
     F.display("S: " + F.convert_sun(sun), 0, 0);
     F.display("T: " + F.convert_temp(temp), 9, 0);
     F.display("H: " + F.convert_humidity(humid), 0, 1);
     F.display("V: " + F.convert_voltage(volt) + "% ", 9, 1);
 
   } else {
-    //Analytic Display
+    //Number Display
     F.display("S: " + String(F.getSunVal(sun)) + "%   ", 0, 0);
     F.display("T: " + String(temp) + "C ", 9, 0);
     F.display("H: " + String(humid) + "%   ", 0, 1);
@@ -182,7 +183,7 @@ void loop() {
   OVERALL_DATA += "B" + F.convert_voltage(volt) + "\n";
   OVERALL_DATA += "V" + String(volt) + "\n";
 
-  Serial.println(OVERALL_DATA); //--> Send Data to VB
+  Serial.println(OVERALL_DATA);  //--> Send Data to VB
   Serial.flush();
 
   // -Low Battery Alarm-
@@ -190,27 +191,27 @@ void loop() {
   //   F.buzzer("Low Battery");
   // }
 
-  // -Water the plant-
-  if (S.readMoisture(moist1_pin)) {       // True if the soil is Dry
-    if (S.readIR(ir1_pin)) {             // True if pot is present
+  // -Auto Water the plant-
+  if (S.readMoisture(moist1_pin)) {  // True if the soil is Dry
+    if (S.readIR(ir1_pin)) {         // True if pot is present
       // F.pumpWater("Plant 1");
     }
-  } else if (S.readMoisture(moist2_pin)) { // True if the soil is Dry
-    if (S.readIR(ir2_pin)) {             // True if pot is present
+  } else if (S.readMoisture(moist2_pin)) {  // True if the soil is Dry
+    if (S.readIR(ir2_pin)) {                // True if pot is present
       // F.pumpWater("Plant 2");
     }
   }
 
   // -Swap Display-
-  if (count >= 20) { // Swap Displays every 5 seconds(250ms*20)
+  if (count >= 20) {  // Swap Displays every 5 seconds(250ms*20)
     if (analytic)
       analytic = false;
     else
       analytic = true;
 
-    count = 0;        // Reset count
+    count = 0;  // Reset count
     F.clearDisplay();
   }
   count++;
-  delay(time_delay); //--> Delay must be the same ar VB GUI
+  delay(time_delay);  //--> Delay must be the same ar VB GUI
 }

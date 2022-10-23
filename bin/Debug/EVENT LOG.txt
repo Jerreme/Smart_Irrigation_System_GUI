@@ -1,1 +1,103 @@
-﻿
+﻿[10/20/22] [5:58:30 PM]: Device Connected
+[10/20/22] [5:58:38 PM]: Device Connected
+[10/20/22] [5:59:03 PM]: Lights Set to On
+[10/20/22] [5:59:06 PM]: Pump Set to On
+[10/20/22] [6:43:26 PM]: Device Connected
+[10/20/22] [6:44:35 PM]: Device Connected
+[10/20/22] [6:49:16 PM]: Device Connected
+[10/20/22] [6:49:35 PM]: Lights Set to On
+[10/20/22] [6:49:37 PM]: Pump Set to On
+[10/20/22] [6:49:39 PM]: Pump Set to On
+[10/20/22] [6:49:40 PM]: Pump Set to On
+[10/20/22] [6:49:41 PM]: Lights Set to On
+[10/20/22] [6:49:54 PM]: Lights Set to On
+[10/20/22] [6:49:54 PM]: Pump Set to On
+[10/20/22] [7:36:56 PM]: Device Connected
+[10/20/22] [7:51:49 PM]: Device Connected
+[10/20/22] [7:52:00 PM]: Device Connected
+[10/20/22] [7:52:20 PM]: Lights Set to On
+[10/20/22] [7:52:23 PM]: Lights Set to On
+[10/20/22] [7:52:27 PM]: Pump Set to On
+[10/20/22] [7:52:44 PM]: Watered Plant 1
+[10/20/22] [7:52:55 PM]: Watered Plant 2
+[10/20/22] [7:53:14 PM]: Watered Plant 1
+[10/20/22] [7:53:21 PM]: Device Connected
+[10/20/22] [7:53:48 PM]: Lights Set to On
+[10/20/22] [7:53:52 PM]: Pump Set to On
+[10/20/22] [7:54:15 PM]: Watered Plant 1
+[10/20/22] [7:59:09 PM]: Device Connected
+[10/20/22] [7:59:42 PM]: Device Connected
+[10/20/22] [7:59:59 PM]: Lights Set to On
+[10/20/22] [8:00:02 PM]: Lights Set to On
+[10/20/22] [8:00:04 PM]: Lights Set to On
+[10/20/22] [8:00:10 PM]: Device Connected
+[10/20/22] [8:00:11 PM]: Device Connected
+[10/20/22] [8:00:33 PM]: Lights Set to On
+[10/20/22] [8:03:54 PM]: Device Connected
+[10/20/22] [9:39:04 PM]: Device Connected
+[10/20/22] [9:40:17 PM]: Lights Set to On
+[10/20/22] [9:46:13 PM]: Watered Plant 1
+[10/20/22] [9:46:32 PM]: Watered Plant 2
+[10/22/22] [12:56:00 PM]: Device Connected
+[10/22/22] [12:56:25 PM]: Device Connected
+[10/22/22] [12:56:44 PM]: Lights Set to On
+[10/22/22] [12:56:48 PM]: Pump Set to On
+[10/22/22] [1:08:28 PM]: Device Connected
+[10/22/22] [1:08:38 PM]: Lights Set to On
+[10/22/22] [1:08:45 PM]: Device Connected
+[10/22/22] [1:09:37 PM]: Device Connected
+[10/22/22] [1:09:46 PM]: Device Connected
+[10/22/22] [1:10:39 PM]: Watered Plant 1
+[10/22/22] [1:15:41 PM]: Device Connected
+[10/22/22] [1:15:55 PM]: Watered Plant 2
+[10/22/22] [4:29:46 PM]: Device Connected
+[10/22/22] [4:29:56 PM]: Lights Set to On
+[10/22/22] [4:30:06 PM]: Pump Set to On
+[10/22/22] [4:30:10 PM]: Lights Set to On
+[10/22/22] [4:30:12 PM]: Pump Set to On
+[10/22/22] [4:30:26 PM]: Watered Plant 2
+[10/22/22] [4:30:37 PM]: Watered Plant 1
+[10/22/22] [4:30:55 PM]: Watered Plant 2
+[10/22/22] [4:31:10 PM]: Lights Set to On
+[10/22/22] [4:31:13 PM]: Pump Set to On
+[10/22/22] [7:06:32 PM]: Device Connected
+[10/22/22] [7:06:41 PM]: Lights Set to On
+[10/22/22] [7:06:44 PM]: Pump Set to On
+[10/22/22] [7:06:48 PM]: Lights Set to On
+[10/22/22] [7:06:52 PM]: Pump Set to On
+[10/22/22] [7:06:53 PM]: Lights Set to On
+[10/22/22] [7:06:56 PM]: Pump Set to On
+[10/22/22] [7:07:02 PM]: Pump Set to On
+[10/22/22] [7:07:06 PM]: Lights Set to On
+[10/22/22] [7:07:09 PM]: Lights Set to On
+[10/22/22] [7:07:13 PM]: Lights Set to On
+[10/22/22] [7:07:17 PM]: Lights Set to On
+[10/22/22] [7:07:20 PM]: Pump Set to On
+[10/22/22] [7:07:23 PM]: Lights Set to On
+[10/22/22] [7:07:27 PM]: Lights Set to On
+[10/22/22] [7:07:34 PM]: Lights Set to On
+[10/22/22] [7:07:36 PM]: Pump Set to On
+[10/22/22] [7:07:45 PM]: Lights Set to On
+[10/22/22] [7:07:46 PM]: Pump Set to On
+[10/22/22] [7:07:51 PM]: Lights Set to On
+[10/22/22] [7:07:52 PM]: Pump Set to On
+[10/22/22] [7:07:56 PM]: Lights Set to On
+[10/22/22] [7:08:02 PM]: Pump Set to On
+[10/22/22] [7:08:07 PM]: Lights Set to On
+[10/22/22] [7:08:11 PM]: Lights Set to On
+[10/22/22] [7:08:13 PM]: Lights Set to On
+[10/22/22] [7:08:15 PM]: Pump Set to On
+[10/22/22] [7:08:29 PM]: Watered Plant 2
+[10/22/22] [7:08:59 PM]: Device Connected
+[10/22/22] [7:09:02 PM]: Lights Set to On
+[10/23/22] [9:39:46 AM]: Device Connected
+[10/23/22] [9:39:56 AM]: Lights Set to On
+[10/23/22] [9:40:02 AM]: Pump Set to On
+[10/23/22] [9:40:09 AM]: Pump Set to On
+[10/23/22] [9:40:12 AM]: Pump Set to On
+[10/23/22] [9:46:59 AM]: Device Connected
+[10/23/22] [9:47:07 AM]: Lights Set to On
+[10/23/22] [9:48:58 AM]: Device Connected
+[10/23/22] [9:57:05 AM]: Device Connected
+[10/23/22] [10:03:18 AM]: Device Connected
+[10/23/22] [10:03:40 AM]: Device Connected

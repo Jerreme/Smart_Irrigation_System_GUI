@@ -1,1 +1,35 @@
-﻿
+﻿[10/18/22] [1:45:57 AM]: Device Disconnected
+[10/20/22] [5:09:38 PM]: Device Disconnected
+[10/20/22] [5:58:09 PM]: Device Disconnected
+[10/20/22] [5:58:31 PM]: Device Disconnected
+[10/20/22] [5:58:52 PM]: Device Failed to Boot
+[10/20/22] [5:59:30 PM]: Watering Plant 2 Failed
+[10/20/22] [6:44:25 PM]: Device is not yet powered
+[10/20/22] [6:44:36 PM]: Device is not yet powered
+[10/20/22] [6:44:46 PM]: Device is not yet powered
+[10/20/22] [6:44:56 PM]: Device is not yet powered
+[10/20/22] [6:45:06 PM]: Device is not yet powered
+[10/20/22] [6:45:13 PM]: Device Disconnected
+[10/20/22] [6:49:31 PM]: Device Failed to Boot
+[10/20/22] [6:51:44 PM]: Device Disconnected
+[10/20/22] [7:36:58 PM]: Device is not yet powered
+[10/20/22] [7:37:08 PM]: Device is not yet powered
+[10/20/22] [7:51:58 PM]: Device Disconnected
+[10/20/22] [7:53:19 PM]: Device Disconnected
+[10/20/22] [7:58:42 PM]: Device Disconnected
+[10/20/22] [7:59:24 PM]: Device Failed to Boot
+[10/20/22] [7:59:40 PM]: Device Disconnected
+[10/20/22] [7:59:57 PM]: Device Failed to Boot
+[10/20/22] [8:00:09 PM]: Device Disconnected
+[10/20/22] [8:00:10 PM]: Device Disconnected
+[10/20/22] [8:00:26 PM]: Device Failed to Boot
+[10/22/22] [12:56:06 PM]: Device is not yet powered
+[10/22/22] [12:56:15 PM]: Device Disconnected
+[10/22/22] [12:56:39 PM]: Device Failed to Boot
+[10/22/22] [1:08:42 PM]: Device Disconnected
+[10/22/22] [1:09:42 PM]: Device Disconnected
+[10/22/22] [4:44:59 PM]: Device Disconnected
+[10/22/22] [7:21:18 PM]: Device Disconnected
+[10/23/22] [10:03:12 AM]: Device Disconnected
+[10/23/22] [10:03:23 AM]: Device Disconnected
+[10/23/22] [10:03:26 AM]: Device Failed to Boot
